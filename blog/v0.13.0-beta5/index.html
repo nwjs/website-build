@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW.js v0.13.0-beta5 Release Notes</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW.js v0.13.0-beta5 Release Notes</h1>
+<p>We are pleased to announce NW.js 0.13.0-beta5. Chromium 48 is updated to 48.0.2564.97 from 48.0.2564.82.
+Multiple bugs were fixed including XP support, transparency, window operations, cookie and webrequest API.</p>
+<p>We&#39;ll look into upgrading to Chromium 49 before RC release.</p>
+<p>Chromium 48 brings exciting changes including custom buttons in the notification; VP9 as the codec for WebRTC, see <a href="http://blog.chromium.org/2015/12/chrome-48-beta-present-to-cast-devices_91.html">http://blog.chromium.org/2015/12/chrome-48-beta-present-to-cast-devices_91.html</a> . You can use them in your NW app today.</p>
+<p>If you&#39;re new to this major new beta version 0.13, please read <a href="http://nwjs.io/blog/v0.13.0-beta1/">http://nwjs.io/blog/v0.13.0-beta1/</a></p>
+<h2 id="changelog">ChangeLog</h2>
+<ul>
+<li>Update Chromium to 48.0.2564.97</li>
+<li>Add back transparency support which is missing in beta4</li>
+<li>support program args in chromedriver</li>
+<li>port App.open argument (#4289)</li>
+<li>support webkit.plugin field in manifest</li>
+<li>Fix package script to support Win XP (#4181)</li>
+<li>[OSX] disable double tap with 2 fingers by default and add option for it (#4249)</li>
+<li>Fix: support window id in Window.open() (#4268)</li>
+<li>Fix: permission for webRequest API (#4220)</li>
+<li>rename &#39;inject-js-start&#39; with &#39;inject_js_start&#39; and add it to Window.open options (#4286)</li>
+<li>rename &#39;always-on-top&#39; with &#39;always_on_top&#39;, and &#39;visible-on-all-workspaces&#39; with &#39;visible_on_all_workspaces&#39;</li>
+<li>Fix: infinite loop in nw.Window.close(true) (#4171)</li>
+<li>Fix: Window title not changed by setting document.title (#3589)</li>
+<li>Fix: startup slow because of scanning for invalid file name (#4303)</li>
+<li>Fix: [OSX] suppress warning when opening devtools</li>
+<li>Fix: conflict between promise rejection callbacks from Blink and Node (#4300)</li>
+<li>Fix: Taking heap snapshot crashes webkit (#3678)</li>
+<li>Fix: [OSX] App quits when closing window if window.show is false in manifest (#4187)</li>
+<li>Fix: crash when opening external links with browser in devtools (#4269, #4121)</li>
+<li>Fix: crash when opening external links with browser in print preview (#4270)</li>
+<li>Fix: cookies API (#4199)</li>
+<li>[docs] add enable-gcm</li>
+<li>[docs] add double_tap_to_zoom_enabled</li>
+<li>[docs] add FAQ for console.log</li>
+<li>[docs] Updated FAQ for AnuglarJS 2</li>
+</ul>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta5/nwjs-v0.13.0-beta5-win-x64.zip">http://dl.nwjs.io/v0.13.0-beta5/nwjs-v0.13.0-beta5-win-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta5/nwjs-v0.13.0-beta5-osx-x64.zip">http://dl.nwjs.io/v0.13.0-beta5/nwjs-v0.13.0-beta5-osx-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta5/nwjs-v0.13.0-beta5-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta5/nwjs-v0.13.0-beta5-linux-x64.tar.gz</a> </li>
+</ul>
+<p>SDK build: </p>
+<ul>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta5/nwjs-sdk-v0.13.0-beta5-win-x64.zip">http://dl.nwjs.io/v0.13.0-beta5/nwjs-sdk-v0.13.0-beta5-win-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta5/nwjs-sdk-v0.13.0-beta5-osx-x64.zip">http://dl.nwjs.io/v0.13.0-beta5/nwjs-sdk-v0.13.0-beta5-osx-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta5/nwjs-sdk-v0.13.0-beta5-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta5/nwjs-sdk-v0.13.0-beta5-linux-x64.tar.gz</a> </li>
+</ul>
+<p>NaCl build and other platforms: <a href="http://dl.nwjs.io/v0.13.0-beta5/">http://dl.nwjs.io/v0.13.0-beta5/</a> </p>
+<p>There are 3 builds for each platform - normal build, sdk build and 
+Nacl build. Normal build doesn&#39;t have devtools, only SDK build does. 
+lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also 
+have more development tools to be exposed in the following releases, 
+as well as the NaCl support. </p>
+<p>Our build infrastructure enables live binary build from git tip so you 
+can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
+<h2 id="known-issues">Known issues</h2>
+<p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a> </p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

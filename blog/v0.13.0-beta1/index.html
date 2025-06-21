@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW.js v0.13.0-beta1 Release Notes</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW.js v0.13.0-beta1 Release Notes</h1>
+<p>We are delighted to announce NW.js 0.13.0-beta1, the first beta release of the 0.13 version, which is based on an adjusted architecture. It will bring the benefit of enabling most features in the Chromium browser, including Chrome Apps support, chrome.* platform APIs, NaCl and Pepper plugin, builtin PDF viewer, printing preview, rich notifications and many more. We also expect faster release cycle with the new architecture in 2016.</p>
+<p>In this version Chromium is updated to 47.0.2526.73 and Node.js is updated to 5.1. We’ll keep updating with the 2 upstreams in the beta cycle.</p>
+<p>We also changed the API to put everything from the ‘nw.gui’ library into the ‘nw’ object. To provide API compatibility with 0.12 applications, we evaluate a builtin shim script at window context creation. It simulates the API  provided by &#39;require(&#39;nw.gui&#39;)&#39;. </p>
+<p>Starting from this version, the official documentation is maintained in the same repo we use for development, and is available in <a href="http://docs.nwjs.io">http://docs.nwjs.io</a> . Welcome to submit PR for it. Documents for the previous versions will be in the wiki as usual.</p>
+<p>There is a new feature  “content verification”, or “app signing”, prevents loading unsigned files with your official binary. For more information, see <a href="http://docs.nwjs.io/en/latest/For%20Users/Advanced/Content%20Verification/">http://docs.nwjs.io/en/latest/For%20Users/Advanced/Content%20Verification/</a></p>
+<p>See what’s changed in the new version and how to migrate your application:
+<a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/</a></p>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta1/nwjs-v0.13.0-beta1-win-x64.zip">http://dl.nwjs.io/v0.13.0-beta1/nwjs-v0.13.0-beta1-win-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta1/nwjs-v0.13.0-beta1-osx-x64.zip">http://dl.nwjs.io/v0.13.0-beta1/nwjs-v0.13.0-beta1-osx-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta1/nwjs-v0.13.0-beta1-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta1/nwjs-v0.13.0-beta1-linux-x64.tar.gz</a> </li>
+</ul>
+<p>SDK build: </p>
+<ul>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta1/nwjs-sdk-v0.13.0-beta1-win-x64.zip">http://dl.nwjs.io/v0.13.0-beta1/nwjs-sdk-v0.13.0-beta1-win-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta1/nwjs-sdk-v0.13.0-beta1-osx-x64.zip">http://dl.nwjs.io/v0.13.0-beta1/nwjs-sdk-v0.13.0-beta1-osx-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta1/nwjs-sdk-v0.13.0-beta1-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta1/nwjs-sdk-v0.13.0-beta1-linux-x64.tar.gz</a> </li>
+</ul>
+<p>NaCl build and other platforms: <a href="http://dl.nwjs.io/v0.13.0-beta1/">http://dl.nwjs.io/v0.13.0-beta1/</a> </p>
+<p>There are 3 builds for each platform - normal build, sdk build and Nacl build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support. </p>
+<p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
+<h2 id="more-chrome-api-and-features-from-chromium-browser">More chrome.* API and features from Chromium browser</h2>
+<p>In previous 0.12 version we started to support chrome.webRequest API to let you intercept network requests made by DOM. In this version we bring even more of chrome.* API. Including rich notification, context menu, usb, etc.</p>
+<p>NW is now able to support rich notifications (aka message center based notifications), with which you can put buttons, lists, images, icon and progress bar in the notification. In this version we also supports print preview and SSL client certificates.</p>
+<p>Under the hood for this improvement is the effort made by upstream to move the extension mechanism towards the Content layer, as well as componentizing the browser modules (<a href="https://www.chromium.org/developers/design-documents/browser-components">https://www.chromium.org/developers/design-documents/browser-components</a>). NW will evolve with upstream towards the “app shell” architecture. In future we’ll split the browser components as separate loadable modules so the binary size can be shrunk significantly.  The new architecture diagram is posted here: <a href="https://github.com/nwjs/nw.js/wiki/NW13-architecture">https://github.com/nwjs/nw.js/wiki/NW13-architecture</a></p>
+<p>We are also using it to refactor the implementation of ‘nw.gui’ library in 0.12. The extension mechanism provide a lightweight and elegant solution for JS API binding. With it we are able to eliminate the overhead of additional IPC messages used in previous version. </p>
+<p>See the upstream docs for the listing of chrome APIs: <a href="https://developer.chrome.com/apps/api_index">https://developer.chrome.com/apps/api_index</a> . Note that APIs related to browser window operation is not supported, because there is no normal Chrome browser window in NW. We support the “app window” instead.</p>
+<p>NW developers follows upstream changes closely and bring them to the application developers. Previously in 0.12 we used the new code cache feature in the V8 engine to improve JS source code compilaton ( <a href="http://docs.nwjs.io/en/latest/For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">http://docs.nwjs.io/en/latest/For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/</a> )</p>
+<h2 id="chrome-packaged-app-support">Chrome (Packaged) App support</h2>
+<p>After supporting many chrome.* APIs, the manifest spec for Chrome Apps are also supported in straightforward way. That means many Chrome Apps can be run directly on NW. Clone the sample apps repository (<a href="https://github.com/GoogleChrome/chrome-app-samples">https://github.com/GoogleChrome/chrome-app-samples</a>) and run one of them with:</p>
+<pre><code class="lang-bash">$ /path/to/nw.exe &lt;folder path of the manifest.json file&gt;
+</code></pre>
+<p>or drag the folder to the NW executable. CRX packaging for Chrome Apps is not supported but you can use the packaging mechanisms provided by NW. See <a href="http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/">http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/</a></p>
+<p>And of course Node.js APIs can be accessed from Chrome App: add “node” permission to manifest.json and you are ready to call nw.require().</p>
+<p>So NW supports 2 kinds of applications now: Chrome Apps and NW Apps. The one with a ‘manifest.json’ file is a Chrome App (with an exception below), while NW App is the one with ‘package.json’. They run in different security model: Chrome Apps run in the same model from Chromium upstream; NW App runs in the native “Node” security model provided by NW platfrom. Apps that has “node” permission in ‘manifest.json’ is a NW App.</p>
+<p>The native security model tries to provide you the maximum capability as in a traditional C++ desktop application. You can access all the chrome.* APIs without declaring permission in manifest, load all Node.js libraries and DOM operations are not limited by cross origin checks any more. Untrusted contents are still running in the same security model from Chromium browser. For more information, see <a href="http://docs.nwjs.io/en/latest/For%20Users/Advanced/Security%20in%20NW.js/">http://docs.nwjs.io/en/latest/For%20Users/Advanced/Security%20in%20NW.js/</a></p>
+<h2 id="known-issues">Known issues</h2>
+<p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Thanks to the following people for their contributions to the release:</p>
+<ul>
+<li>Liu Cong: porting APIs, documentation and tests</li>
+<li>Jefry Tedjokusumo from V-cube Global Services: transparency and click-through feature</li>
+<li>Kevin Fan: rebase to Chromium 47 and Node.js 5.1</li>
+<li>Chase Willden: porting APIs</li>
+<li>Adam Lynch, Steffen Müller, etc for package tools</li>
+<li>And to all the people who submit bug reports, wiki docs and answering questions in mailing list and gitter channel!</li>
+</ul>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

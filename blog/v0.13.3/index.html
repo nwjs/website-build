@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW.js v0.13.3 Released with disable requestAnimationFrame throttling feature</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW.js v0.13.3 Released with disable requestAnimationFrame throttling feature</h1>
+<p>2016/04/04</p>
+<p>We&#39;re glad to release NW.js 0.13.3. It includes a feature to disable requestAnimationFrame throttling when window is minimized or hidden; Node.js is updated to 5.10.0; and some fixes we made during these days.</p>
+<p>A new command line argument &#39;--disable-raf-throttling&#39; is introduced. When it&#39;s used, requestAnimationFrame callback will continue to fire when window is minimized or hidden. It&#39;s pretty useful for game developer. When the argument is not used, it behaves in the same way as Chrome browser and has no side effects.</p>
+<p>For more information on the new milestone 0.13, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
+<h2 id="changelog">ChangeLog</h2>
+<ul>
+<li>Update Node.js to 5.10.0</li>
+<li>support --disable-raf-throttling to enable RequestAnimationFrame for background apps <a href="https://github.com/nwjs/nw.js/issues/4664">(#4664)</a></li>
+<li>Fix: App will crash if CFBundleIdentifier in plist longer than 30 chrs <a href="https://github.com/nwjs/nw.js/issues/4638">(#4638)</a></li>
+<li>Fix: Crash when open a pdf file in webview. <a href="https://github.com/nwjs/nw.js/issues/4644">(#4644)</a></li>
+<li>Fix: [WIN] window restore size is changed when aero glass is on <a href="https://github.com/nwjs/nw.js/issues/4323">(#4323)</a></li>
+<li>Fix: inject_js_end not working on remote pages <a href="https://github.com/nwjs/nw.js/issues/4656">(#4656)</a></li>
+<li>Fix: Queries were sent to Google to update plugin metadata <a href="https://github.com/nwjs/nw.js/issues/4669">(#4669)</a></li>
+<li>Fix: [WIN] Window size includes title bar <a href="https://github.com/nwjs/nw.js/issues/4627">(#4627)</a></li>
+<li>Fix: Crash when bg-script calls nw.Window.get() <a href="https://github.com/nwjs/nw.js/issues/4368">(#4368)</a></li>
+<li>Fix: Disabled menu item, still accessible via hotkey <a href="https://github.com/nwjs/nw.js/issues/2261">(#2261)</a></li>
+<li>Fix: Unable to turn off / disable debug.log <a href="https://github.com/nwjs/nw.js/issues/4637">(#4637)</a></li>
+<li>[docs] data-path -&gt; user-data-dir</li>
+<li>[docs] add link to buildbot</li>
+<li>[docs] using flash plugin</li>
+<li>[docs] location of nwjc and chromedriver</li>
+</ul>
+<p>Full changelog: <a href="https://github.com/nwjs/nw.js/blob/nw13/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw13/CHANGELOG.md</a></p>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="http://dl.nwjs.io/v0.13.3/nwjs-v0.13.3-win-x64.zip">http://dl.nwjs.io/v0.13.3/nwjs-v0.13.3-win-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.3/nwjs-v0.13.3-osx-x64.zip">http://dl.nwjs.io/v0.13.3/nwjs-v0.13.3-osx-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.3/nwjs-v0.13.3-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.3/nwjs-v0.13.3-linux-x64.tar.gz</a> </li>
+</ul>
+<p>SDK build: </p>
+<ul>
+<li><a href="http://dl.nwjs.io/v0.13.3/nwjs-sdk-v0.13.3-win-x64.zip">http://dl.nwjs.io/v0.13.3/nwjs-sdk-v0.13.3-win-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.3/nwjs-sdk-v0.13.3-osx-x64.zip">http://dl.nwjs.io/v0.13.3/nwjs-sdk-v0.13.3-osx-x64.zip</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.3/nwjs-sdk-v0.13.3-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.3/nwjs-sdk-v0.13.3-linux-x64.tar.gz</a> </li>
+</ul>
+<p>NaCl build and other platforms: <a href="http://dl.nwjs.io/v0.13.3/">http://dl.nwjs.io/v0.13.3/</a> </p>
+<p>There are 3 builds for each platform - normal build, sdk build and Nacl build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support. </p>
+<p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
+<h2 id="known-issues">Known issues</h2>
+<p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
+<h2 id="discussion">Discussion</h2>
+<p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/KiSR4vWOUnw/8UQYT_KsCgAJ">https://groups.google.com/d/msg/nwjs-general/KiSR4vWOUnw/8UQYT_KsCgAJ</a></p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

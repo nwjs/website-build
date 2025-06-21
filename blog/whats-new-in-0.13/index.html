@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>What's new in NW.js v0.13</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">What's new in NW.js v0.13</h1>
+<p>2016/03/23</p>
+<h2 id="overview">Overview</h2>
+<p>NW.js v0.13 brings most features in the Chromium browser, including Chrome Apps support, chrome.* platform APIs, NaCl and Pepper plugin, builtin PDF viewer, printing preview, rich notifications and many more. This is done by following upstream closely with an adjusted architecture. We also expect faster release cycle and better stability with the new architecture in 2016.</p>
+<p>This post introduces the following topics for the new release:</p>
+<ul>
+<li><code>chrome.*</code> API support</li>
+<li>Chrome (Packaged) App support</li>
+<li>More Features from Chromium Browser</li>
+<li>Better Native Node.js Module Support</li>
+<li>Full DevTools Extension Support and Embed Devtools as Part of Your App</li>
+<li>Content Verification</li>
+<li>Official Documentation</li>
+<li>Multiple Build Flavors</li>
+<li>Mixed Context Mode</li>
+<li>Under the hood</li>
+<li>Changes and migration</li>
+<li>Acknowledgements</li>
+</ul>
+<h2 id="chrome-api-support">chrome.* API support</h2>
+<p>In previous 0.12 version we started to support chrome.webRequest API to let you intercept network requests made by DOM. In this version we bring even more of chrome.* API. Including rich notification, context menu, usb, etc.</p>
+<p>With rich notifications you can put buttons, lists, images, icon and progress bar in the notification.</p>
+<p><img src="/images/noti1.png" alt="notification" title="Rich Notification">
+<img src="/images/noti2.png" alt="notification" title="Rich Notification"><br><em>Rich notifications</em></p>
+<p>See the upstream docs for the listing of chrome APIs: we support all <code>chrome.*</code> API in the <a href="https://developer.chrome.com/apps/api_index">Chrome App platform</a>. In addition, we support some chrome.* API in the <a href="https://developer.chrome.com/extensions/api_index">Extension Platform</a>. There is document tracks the <a href="http://docs.nwjs.io/en/v0.13.0/References/Chrome%20Extension%20APIs/">list of them</a>.</p>
+<p>NW developers follows upstream changes closely and bring them to the application developers. Previously in 0.12 we used the new code cache feature in the V8 engine to improve <a href="http://docs.nwjs.io/en/v0.13.0/For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">JS source code compilaton</a></p>
+<h2 id="chrome-packaged-app-support">Chrome (Packaged) App support</h2>
+<p>After supporting many chrome.* APIs, the manifest spec for Chrome Apps are also supported in straightforward way. That means many Chrome Apps can be run directly on NW. Clone the <a href="https://github.com/GoogleChrome/chrome-app-samples">sample apps repository</a> and run one of them with:</p>
+<pre><code class="lang-bash">$ /path/to/nw.exe &lt;folder path of the manifest.json file&gt;
+</code></pre>
+<p>or drag the folder to the NW executable. CRX packaging for Chrome Apps is not supported but you can use the packaging mechanisms provided by NW. See <a href="http://docs.nwjs.io/en/v0.13.0/For%20Users/Package%20and%20Distribute/">package document</a> for more. Also see <a href="https://chrome.google.com/webstore/category/apps?_feature=chromeapp">thousands of Chrome Apps online</a>.</p>
+<p>And of course Node.js APIs can be accessed from Chrome App: add “node” permission to manifest.json and you are ready to call nw.require().</p>
+<p>So NW supports 2 kinds of applications now: Chrome Apps and NW Apps. The one with a ‘manifest.json’ file is a Chrome App (with an exception below), while NW App is the one with ‘package.json’. They run in different security model: Chrome Apps run in the same model from Chromium upstream; NW App runs in the native “Node” security model provided by NW platfrom. Apps that has “node” permission in ‘manifest.json’ is a NW App.</p>
+<p>The native security model tries to provide you the maximum capability as in a traditional C++ desktop application. You can access all the chrome.* APIs without declaring permission in manifest, load all Node.js libraries and DOM operations are not limited by cross origin checks and CSP any more. Untrusted contents are still running in the same security model from Chromium browser. For more information, see <a href="http://docs.nwjs.io/en/v0.13.0/For%20Users/Advanced/Security%20in%20NW.js/">Security in NW.js</a>.</p>
+<h2 id="more-features-from-chromium-browser">More Features from Chromium Browser</h2>
+<p>NW.js application develpers have been asking for more browser features and compatibility between NW.js and Chromium upstream. With the new browser component based architecuture <em>(see &quot;under the hood&quot; section below)</em>, we are now able to provide many features in the Chromium browser, including print preview, PDF viewer and SSL client certificates. Below are some samples:</p>
+<p><a href="/images/pdf.png"><img src="/images/pdf-s.png" alt="pdf" title="PDF viewer"></a><br><em>The built-in PDF viewer</em></p>
+<p><a href="/images/print.png"><img src="/images/print-s.png" alt="print" title="Print Preview"></a><br><em>Print Preview</em></p>
+<p><a href="http://engineroom.teamwork.com/resurrecting-clippy/"><img src="/images/nw-clipper.jpg" alt="clipper" title="Clipper made with NW by Adam Lynch"></a><br><em><a href="http://engineroom.teamwork.com/resurrecting-clippy/">Clipper made by Adam Lynch</a> with the Transparency feature in NW</em></p>
+<h2 id="better-native-node-js-module-support">Better Native Node.js Module Support</h2>
+<p>Native modules built for Node.js can be loaded into NW.js now. The previous tool to build them for NW.js -- &#39;nw-gyp&#39; is not needed any more. In Linux and OSX you can just load the native module built for Node.js directly. In windows you&#39;ll need to replace a file installed by Node. See more information in the <a href="https://groups.google.com/d/msg/nwjs-general/UqEq8ito2gI/W-ld9LSoDQAJ">announcement</a>.</p>
+<h2 id="full-devtools-extension-support-and-embed-devtools-as-part-of-your-app">Full DevTools Extension Support and Embed Devtools as Part of Your App</h2>
+<p>NW.js is now able to fully support devtools extensions, including the one for ReactJS etc. To use them, see <a href="http://docs.nwjs.io/en/v0.13.0-beta7/For%20Users/Debugging%20with%20DevTools/#using-devtools-extensions">the guide here</a>.</p>
+<p><a href="/images/react.png"><img src="/images/react-s.png" alt="react devtools" title="React Devtools Extension"></a><br><em>Debugging React App easily with React Devtools Extension</em></p>
+<p>A method is added to webview tag, so you can launch devtools for this webview. Besides opening a new devtools window, You can also place the devtools UI in a webview. This enables IDE software for better UI. See <a href="http://docs.nwjs.io/en/v0.13.0-beta7/References/webview%20Tag/#webviewshowdevtoolsshow-container">the doc</a> for more information.</p>
+<p><a href="/images/devtools.png"><img src="/images/devtools-s.png" alt="embedding devtools" title="Embedding Devtools in your application"></a><br><em>A sample IDE for debugging mobile web page on the desktop</em></p>
+<h2 id="content-verification">Content Verification</h2>
+<p>The new feature &#39;content verification&#39;, or &#39;app signing&#39;, prevents loading unsigned files with your official binary. Given a keypair, you sign the application files and redistribute the signature file with your application. The public key is built into your NW.js binary. If users or 3rd party modified the files. NW will report the file is corrupted and quit immediately.</p>
+<p>See <a href="http://docs.nwjs.io/en/v0.13.0/For%20Users/Advanced/Content%20Verification/">the official document for this feature</a> for more information.</p>
+<h2 id="official-documentation">Official Documentation</h2>
+<p>Starting from this version, the official documentation is maintained in the same repo we use for development, and is available in <a href="http://docs.nwjs.io">http://docs.nwjs.io</a> . Welcome to submit PR for it. Documents for the previous versions will be in the wiki as usual.</p>
+<h2 id="multiple-build-flavors">Multiple Build Flavors</h2>
+<p>There are 3 builds for each platform - normal build, sdk build and Nacl build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support. </p>
+<p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
+<h2 id="mixed-context-mode">Mixed Context Mode</h2>
+<p>In this mode, Node.js objects and DOM objects reside in the same Context (thus will be destroyed upon navigation). The trade-off is that mixed mode is easier to use in some cases, while the normal mode provides better isolation and supports navigation or multi-page application better. For more information, see the discussion in <a href="https://github.com/nwjs/nw.js/issues/3107">#3107</a>.</p>
+<h2 id="under-the-hood">Under the hood</h2>
+<p>Under the hood for this improvement is the effort made by upstream to move the extension mechanism towards the Content layer, as well as componentizing the <a href="https://www.chromium.org/developers/design-documents/browser-components">browser modules</a>. NW will evolve with upstream towards the “app shell” architecture. In future we’ll split the browser components as separate loadable modules so the binary size can be shrunk significantly.</p>
+<p><a href="/images/arch.png"><img src="/images/arch-s.png" alt="arch"></a><br><em>NW13 architecture</em></p>
+<p>We are also using it to refactor the implementation of ‘nw.gui’ library in 0.12. The extension mechanism provide a lightweight and elegant solution for JS API binding. With it we are able to eliminate the overhead of additional IPC messages used in previous version. </p>
+<h2 id="changes-and-migration">Changes and migration</h2>
+<p>We also changed the API to put everything from the ‘nw.gui’ library into the ‘nw’ object. To provide API compatibility with 0.12 applications, we evaluate a <a href="https://github.com/nwjs/nw.js/blob/nw13/src/resources/nw_pre13_shim.js">builtin shim script</a> at window context creation. It simulates the API  provided by &#39;require(&#39;nw.gui&#39;)&#39;. </p>
+<p>Refer to the <a href="http://docs.nwjs.io/en/v0.13.0/For%20Users/Migration/From%200.12%20to%200.13/">migration guide</a> if you have 0.12 application. We have been working to make the changes minimal under the new architecture.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Thanks to the following people for their contributions to the release:</p>
+<ul>
+<li>Liu Cong: porting APIs, documentation and tests</li>
+<li>Jefry Tedjokusumo from V-cube Global Services: transparency and click-through feature</li>
+<li>Kevin Fan: keeping Chromium rebased to 47-49 and Node.js to 5.x</li>
+<li>Chase Willden: porting APIs</li>
+<li>Adam Lynch, Mithgol, Kyle Robinson Young, Steffen Müller, etc for package tools</li>
+<li>And to all the people who submit bug reports, wiki docs and answering questions in mailing list and gitter channel!</li>
+</ul>
+<h2 id="discussion">Discussion</h2>
+<p>See our mailing list to discuss on this article: <a href="https://groups.google.com/d/msg/nwjs-general/RZ0e1Jsj0zI/PifVr6TgAgAJ">https://groups.google.com/d/msg/nwjs-general/RZ0e1Jsj0zI/PifVr6TgAgAJ</a></p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

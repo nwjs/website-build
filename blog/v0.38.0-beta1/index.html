@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW.js v0.38.0-beta1 Released with Chromium Beta 74</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW.js v0.38.0-beta1 Released with Chromium Beta 74</h1>
+<p>2019/04/03</p>
+<p>I&#39;m excited to announce NW.js 0.38.0-beta1 in beta branch. It ships Chromium Beta 74.</p>
+<p>Chromium 74 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports <strong>Private class fields, CSS prefers-reduced-motion media query, JavaScript API for feature policy</strong> and more. Please check <a href="https://blog.chromium.org/2019/03/chrome-74-beta-reducing-unwanted-motion.html">Chromium blog</a> and <a href="https://v8.dev/blog/v8-release-74">v8 blog</a> for details. For a complete list of all features (including experimental features) in this release, see the <a href="https://www.chromestatus.com/features#milestone=74">Chrome 74 milestone hotlist</a>.</p>
+<p>We&#39;ve made the 0.38 branch ready soon after Chromium beta bumps to 74. Please try it and give your valuable feedback. We&#39;ve been working on 2 branches simultaneously: a released branch on current Chromium stable and a beta branch on Chromium beta.</p>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="https://dl.nwjs.io/v0.38.0-beta1/nwjs-v0.38.0-beta1-win-x64.zip">https://dl.nwjs.io/v0.38.0-beta1/nwjs-v0.38.0-beta1-win-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.38.0-beta1/nwjs-v0.38.0-beta1-osx-x64.zip">https://dl.nwjs.io/v0.38.0-beta1/nwjs-v0.38.0-beta1-osx-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.38.0-beta1/nwjs-v0.38.0-beta1-linux-x64.tar.gz">https://dl.nwjs.io/v0.38.0-beta1/nwjs-v0.38.0-beta1-linux-x64.tar.gz</a> </li>
+</ul>
+<p>SDK build: </p>
+<ul>
+<li><a href="https://dl.nwjs.io/v0.38.0-beta1/nwjs-sdk-v0.38.0-beta1-win-x64.zip">https://dl.nwjs.io/v0.38.0-beta1/nwjs-sdk-v0.38.0-beta1-win-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.38.0-beta1/nwjs-sdk-v0.38.0-beta1-osx-x64.zip">https://dl.nwjs.io/v0.38.0-beta1/nwjs-sdk-v0.38.0-beta1-osx-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.38.0-beta1/nwjs-sdk-v0.38.0-beta1-linux-x64.tar.gz">https://dl.nwjs.io/v0.38.0-beta1/nwjs-sdk-v0.38.0-beta1-linux-x64.tar.gz</a> </li>
+</ul>
+<p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.38.0-beta1/">https://dl.nwjs.io/v0.38.0-beta1/</a> </p>
+<p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
+<p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
+<h2 id="known-issues">Known issues</h2>
+<p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
+<h2 id="discussion">Discussion</h2>
+<p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/dENPv39VuY8/Cc_aeySbBQAJ">https://groups.google.com/d/msg/nwjs-general/dENPv39VuY8/Cc_aeySbBQAJ</a></p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

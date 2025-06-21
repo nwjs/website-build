@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW.js v0.36.0 Released with Chromium 72 and Node.js 11.8.0</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW.js v0.36.0 Released with Chromium 72 and Node.js 11.8.0</h1>
+<p>2019/01/31</p>
+<p>I&#39;m excited to announce NW.js 0.36.0 stable release. It ships Chromium 72 and Node.js v11.8.0.</p>
+<p>Chromium 72 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports Public class fields, user activation API, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=326740">screen capturing for WebRTC</a>, Web Authentication for U2F/CTAP2 FIDO BLE and Windows devices and more. Please check <a href="https://blog.chromium.org/2018/12/chrome-72-beta-public-class-fields-user.html">Chromium blog</a> and <a href="https://v8.dev/blog/v8-release-72">v8 blog</a> for details. For a complete list of all features (including experimental features) in this release, see the <a href="https://www.chromestatus.com/features#milestone=72">Chrome 72 milestone hotlist</a>.</p>
+<p>We made the 0.36 branch ready soon after Chromium beta bumped to 72. Thanks to the testers for their valuable feedback and bug reports. We&#39;ve been working on 2 branches simultaneously: a released branch on current Chromium stable and a beta branch on Chromium beta.</p>
+<h2 id="changelog">ChangeLog</h2>
+<ul>
+<li>Update Chromium to <a href="https://chromereleases.googleblog.com/2019/01/stable-channel-update-for-desktop.html">72.0.3626.81</a></li>
+<li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v11.8.0/">v11.8.0</a></li>
+<li>support NW_PRE_ARGS environment variable</li>
+<li>nw2: macOS: fix Cmd-Q with user menu bar</li>
+<li>nw2: disable ExtensionDevToolsInfoBar</li>
+<li>[macos] ship libffmpeg with sdk; move libffmpeg location in bundle</li>
+<li>[docs] NW_PRE_ARGS environment variable</li>
+</ul>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="https://dl.nwjs.io/v0.36.0/nwjs-v0.36.0-win-x64.zip">https://dl.nwjs.io/v0.36.0/nwjs-v0.36.0-win-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.36.0/nwjs-v0.36.0-osx-x64.zip">https://dl.nwjs.io/v0.36.0/nwjs-v0.36.0-osx-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.36.0/nwjs-v0.36.0-linux-x64.tar.gz">https://dl.nwjs.io/v0.36.0/nwjs-v0.36.0-linux-x64.tar.gz</a> </li>
+</ul>
+<p>SDK build: </p>
+<ul>
+<li><a href="https://dl.nwjs.io/v0.36.0/nwjs-sdk-v0.36.0-win-x64.zip">https://dl.nwjs.io/v0.36.0/nwjs-sdk-v0.36.0-win-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.36.0/nwjs-sdk-v0.36.0-osx-x64.zip">https://dl.nwjs.io/v0.36.0/nwjs-sdk-v0.36.0-osx-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.36.0/nwjs-sdk-v0.36.0-linux-x64.tar.gz">https://dl.nwjs.io/v0.36.0/nwjs-sdk-v0.36.0-linux-x64.tar.gz</a> </li>
+</ul>
+<p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.36.0/">https://dl.nwjs.io/v0.36.0/</a> </p>
+<p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
+<p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
+<h2 id="known-issues">Known issues</h2>
+<p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
+<h2 id="discussion">Discussion</h2>
+<p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/bTsOlujDz9E/wX8GdgjaHgAJ">https://groups.google.com/d/msg/nwjs-general/bTsOlujDz9E/wX8GdgjaHgAJ</a></p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

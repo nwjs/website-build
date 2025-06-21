@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW2, Another Key Step of NW.js</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW2, Another Key Step of NW.js</h1>
+<p>2019/11/13</p>
+<p>The new browser window implementation for NW.js, which is called &quot;NW NewWin&quot; internally, a.k.a &quot;NW2&quot;, is an important refactoring I&#39;ve been working on. The NW.js application&#39;s GUI window implementation and various internal webpage handling around it has been migrated from Chrome App&#39;s codebase to the Chrome browser&#39;s codebase.</p>
+<p>This work will be the foundation of more major features (tab support, find in page etc), fixing <a href="https://github.com/nwjs/nw.js/issues/4418">important issues</a> and better software quality. It&#39;s one of the most exciting changes since the 0.13 release. It&#39;s also found with issue fixed and better performance in user&#39;s testing.</p>
+<p>In theory, your application should just work in the same way without any issues as it&#39;s a pure internal change. It got the first release in 0.35.4 earlier in this year under <code>--enable-features=nw2</code> switch. The switch will become the default soon in the upcoming 0.42.4 release. Thanks to all the community members who helped testing and contributing to it in <a href="https://github.com/nwjs/nw.js/issues/5875">the tracking issue</a>, including @Blatman, @TheRealDannyyy, @elpeleq42, @Yonezpt, @jtg-gg and many others.</p>
+<p>After the release, if you find anything unusual in your application, try the <code>--disable-features=nw2</code> switch first and file an issue on GitHub if your application works well with NW2 disabled. I&#39;ll keep the old NW1 mode maintained for several major versions and then start gradually removing code for it. Eventually the NW1 mode will not be supported and NW2 will be mandatory.</p>
+<p>Cheers,<br>Roger Wang, NW.js creator and maintainer</p>
+<p><a href="https://groups.google.com/d/msg/nwjs-general/1YMHN3m1rtI/f3gF-Jl3AgAJ">Join the discussion in the mailing list on this topic</a></p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nwjs">
+  <meta name="keywords" content="nw.js, nwjs, nw js, node-webkit, node, node.js, chrome, chromium, javascript">
+  
+  <title>NW.js v0.20.3 Released with Node.js v7.6.0, More Print Options and Better Proxy Support</title>
+  <!-- feeds -->
+  <link rel="alternate" href="/feed/blog.xml" title="NW.js Blog" type="application/rss+xml">
+  <!-- stylesheets -->
+  <link href="/lib/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <!-- scripts -->
+  <script src="/lib/react/react.js"></script>
+  <script src="/lib/react/react-dom.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header>
+      <a href="/" class="logo-wrapper">
+          <img src="/img/logo.png" class="logo" alt="NWJS.io"><span class="big-title">NW.js</span>
+      </a>
+      <nav>
+          <a href="/">Home</a> |
+          <a href="/downloads/">Downloads</a> |
+          <a href="/blog/">Blog</a> |
+          <a href="http://docs.nwjs.io">Documentation</a>
+      </nav>
+  </header>
+  <div class="container blog">
+  <div class="content">
+  <h1 id="-title-">NW.js v0.20.3 Released with Node.js v7.6.0, More Print Options and Better Proxy Support</h1>
+<p>2017/02/23</p>
+<p>NW.js 0.20.3 is here with multiple bug fixes and more features on the stable branch. Node.js was updated to v7.6.0</p>
+<ul>
+<li>More print options: now you can customize the default print preview dialog by setting options and setting <code>autoprint</code> to false; change the header and footer by setting &#39;headerString&#39; and &#39;footerString&#39; options.</li>
+<li>Setting proxy PAC file url and auto proxy detection are supported.</li>
+<li>JS Source Protection: evalNWBin now accepts Buffer or ArrayBuffer besides path to file.</li>
+<li>nwuseragent feature was ported from 0.12 so you can change the user agent string for resource loading in iframes.</li>
+</ul>
+<p>Please see the changelog for details.</p>
+<p>Previously we launched 0.20 based on Chromium 56, which contains under-the-hood performance and stability tweaks, and some cool new features to explore like CSS position: sticky and Web Bluetooth. See the <a href="https://blog.chromium.org/2016/12/chrome-56-beta-not-secure-warning-web.html">upstream announcement</a> for more information. NW20 also features <a href="http://v8project.blogspot.com/2016/12/v8-release-56.html">V8 5.6, which delivers a number of key improvements in memory and performance footprint, as well as Ignition and TurboFan pipeline for ES.next</a>. This version is going to ship the WebAssembly browser preview, which is a new runtime and compilation target for the web. Please refer to the <a href="http://v8project.blogspot.de/2016/10/webassembly-browser-preview.html">dedicated upstream blog post</a> for further information.</p>
+<p>Chromium 56 introduces an optimization to save CPU when tabs are in the background. It&#39;s done by <a href="https://docs.google.com/document/d/1vCUeGfr2xzZ67SFt2yZjNeaIcXGp2Td6KHN7bI02ySo/edit">throttling background tabs&#39; timers</a>. See <a href="http://blog.strml.net/2017/01/chrome-56-now-aggressively-throttles.html">this blog post</a> for more information. If you don&#39;t want this in your NW.js application, you can use the <a href="http://docs.nwjs.io/en/latest/References/Command%20Line%20Options/#-disable-raf-throttling">--disable-raf-throttling switch</a> to disable it.</p>
+<p>We&#39;ve been working on 3 branches simultaneously: a released branch on current Chromium stable, a beta branch on Chromium beta and a 0.14 branch for legacy OS support.</p>
+<p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
+<h2 id="changelog">ChangeLog</h2>
+<ul>
+<li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v7.6.0/">v7.6.0</a></li>
+<li>Support passing Buffer or ArrayBuffer to evalNWBin <a href="https://github.com/nwjs/nw.js/issues/5220">(#5220)</a></li>
+<li>Support pac_url and auto proxy detection<a href="https://github.com/nwjs/nw.js/issues/916"> (#916)</a></li>
+<li>New print options: autoprint, headerString, footerString <a href="https://github.com/nwjs/nw.js/issues/5702">(#5702)</a></li>
+<li>Fix: nwuseragent not working after 0.13 <a href="https://github.com/nwjs/nw.js/issues/5397">(#5397)</a></li>
+<li>Fix: flash in embed or object tag not working using file protocol <a href="https://github.com/nwjs/nw.js/issues/5706">(#5706)</a></li>
+<li>Fix: multiple menu shortcuts issues <a href="https://github.com/nwjs/nw.js/issues/5657">(#5657)</a></li>
+<li>Disable resolving www.google.com in DNS predictor on startup</li>
+<li>[docs] upstream Windows build instructions has moved</li>
+<li>[docs] update for new features</li>
+</ul>
+<p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/nw20/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw20/CHANGELOG.md</a></p>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-win-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-win-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-osx-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-osx-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-linux-x64.tar.gz</a> </li>
+</ul>
+<p>SDK build: </p>
+<ul>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-win-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-win-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-osx-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-osx-x64.zip</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-linux-x64.tar.gz</a> </li>
+</ul>
+<p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.20.3/">https://dl.nwjs.io/v0.20.3/</a> </p>
+<p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
+<p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
+<h2 id="known-issues">Known issues</h2>
+<p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
+<h2 id="discussion">Discussion</h2>
+<p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/UsnHwdLJV28/01vBrrheAQAJ">https://groups.google.com/d/msg/nwjs-general/UsnHwdLJV28/01vBrrheAQAJ</a></p>
+
+  </div>
+  </div>
+  <footer>
+      <div class="column">
+          <h2>Help</h2>
+          <a href="http://docs.nwjs.io">Documentation</a>
+          <a href="https://github.com/nwjs/nw.js/wiki">Wiki</a>
+          <a href="https://github.com/nwjs/nw.js/issues">Bugs</a>
+      </div>
+      <div class="column">
+          <h2>Community</h2>
+          <a href="https://groups.google.com/forum/#!forum/nwjs-general">Mailing List</a>
+          <a href="https://gitter.im/nwjs/nw.js">Chat on Gitter</a>
+          <a href="https://discord.gg/tyx267vKRH">Chat on Discord</a>
+      </div>
+      <div class="column">
+          <h2>Connect</h2>
+          <a href="https://github.com/nwjs/nw.js">GitHub</a>
+          <a href="https://twitter.com/nw_js">Twitter</a>
+      </div>
+      <div class="bottom">
+          <div class="left">Copyright &copy; 2015-2024 NW.js community</div>
+      </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-58514248-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>
