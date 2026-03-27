@@ -33,19 +33,19 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">JavaScript Source Code Protection Performance Vastly Improved</h1>
+  <h1>JavaScript Source Code Protection Performance Vastly Improved</h1>
 <p>2017/03/24</p>
 <p><a href="https://github.com/nwjs/nw.js/issues/269#event-37337214">Four years ago</a> we released JavaScript Source Code protection feature in v0.4.2. It gives programmers capability to compile their source code to binary machine code so that their intellectual property could be protected in a better way. This follows one of the founding idea of the project - let JavaScript programmers do everything that C/C++ programmers can do. From the feedback, I can say that many users are using it happily although it suffers from a performance issue, that compiled binary code runs slower than JS source code (~30% according to v8bench).</p>
 <p>Today, I&#39;m excited to announce that the performance issue has been fixed: <strong>compiled binary code now run as fast as JS source code without performance overhead</strong>. This brings 3x-4x improvement according to our test:</p>
 <p><img src="/images/octane.png" alt="before-the-fix" title="Before the fix">
 <img src="/images/octane-future.png" alt="after-the-fix" title="After the fix"></p>
 <p>The fix has been released in <a href="v0.22.0-beta1/">v0.22.0-beta1</a> under a flag. And it will be turned on by default in v0.23.0. To use it, pass <code>--future</code> when you compile the source code and start NW:</p>
-<pre><code class="lang-bash">$ nwjc --future source.js compiled.bin
+<pre><code class="language-bash">$ nwjc --future source.js compiled.bin
 $ nw --js-flags=&quot;--future&quot; .
 </code></pre>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">See more here</a> to learn how to use the source code protection feature.</p>
 <p><a href="/blog/whats-new-in-0.13/">It has been exactly a year</a> after we released the 0.13 milestone. After that we executed well on keeping close updates with Chromium upstream. NW major version bumps within 1 day or even on the same day after every Chromium browser stable upgrade. We delivered many new features and optimizations in the web engine while keeps up the quality. I&#39;m happy to write this blog post 1 year later and see what has been done. Moving forward, we expect to keep pace and please stay tuned for more exciting news.</p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this article: <a href="https://groups.google.com/d/msg/nwjs-general/kmQ2zCuL838/1MceRe5mFQAJ">https://groups.google.com/d/msg/nwjs-general/kmQ2zCuL838/1MceRe5mFQAJ</a></p>
 
   </div>

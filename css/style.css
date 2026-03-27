@@ -1,13 +1,11 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #333;
 }
-
 body a {
   color: inherit;
   text-decoration: none;
 }
-
 body .content a {
   color: #15C;
 }
@@ -22,22 +20,18 @@ header .logo-wrapper {
   justify-content: center;
   align-items: center;
 }
-
 header .logo-wrapper img.logo {
   vertical-align: middle;
 }
-
 header nav {
   background: #333333;
   line-height: 35px;
   color: #F5F5F5;
   text-align: center;
 }
-
 header nav a {
   text-transform: uppercase;
 }
-
 header .big-title {
   font-size: 72px;
   color: #F5F5F5;
@@ -51,7 +45,6 @@ footer {
   text-align: center;
   padding: 30px;
 }
-
 footer .column {
   display: inline-block;
   width: 200px;
@@ -59,15 +52,12 @@ footer .column {
   vertical-align: top;
   margin-bottom: 20px;
 }
-
 footer .column h2 {
   color: #1CA0DA;
 }
-
 footer .column a {
   display: block;
 }
-
 footer .bottom {
   opacity: 0.5;
 }
@@ -75,24 +65,20 @@ footer .bottom {
 .container.home {
   text-align: center;
 }
-
 .container.home .download {
   background: url("/img/bg_pattern_dark.png");
   color: #FFF;
   padding: 30px 0px;
 }
-
 .container.home .download h1 {
   margin: 0px;
   font-weight: normal;
 }
-
 .container.home .download .dlbtnlist {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .container.home .download .dlbtnlist .d32bit a,
 .container.home .download .dlbtnlist .d64bit a {
   display: inline-block;
@@ -106,11 +92,9 @@ footer .bottom {
   font-size: 1em;
   margin: 5px;
 }
-
 .container.home .download .release-notes {
   opacity: 0.5;
 }
-
 .container.home .github {
   font-size: 1.4em;
   background: #1CA0DA;
@@ -118,17 +102,14 @@ footer .bottom {
   line-height: 60px;
   color: #FFF;
 }
-
 .container.home .features {
   margin: 0px auto;
   padding: 20px 0px;
 }
-
 .container.home .features h2 {
   max-width: 900px;
   margin: auto;
 }
-
 .container.home .features ul {
   list-style: none;
   text-align: center;
@@ -136,7 +117,6 @@ footer .bottom {
   max-width: 900px;
   margin: auto;
 }
-
 .container.home .features ul li {
   display: inline-block;
   width: 250px;
@@ -148,64 +128,52 @@ footer .bottom {
   background: url("/img/bg_pattern_light.png");
   padding: 0px;
 }
-
 .container.download .content {
   margin: 0px auto;
   padding: 10px 30px;
 }
-
 .container.download .content nav {
   padding: 5px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
 }
-
 .container.download .content nav h3 {
   margin: 0px;
 }
-
 .container.download .content nav > * {
   border: 1px solid #1CA0DA;
   display: inline-block;
   padding: 5px;
   flex: 1;
 }
-
 .container.download .content nav > * > div {
   font-size: small;
 }
-
 .container.download .content nav > .selected {
   background-color: #1CA0DA;
   color: #F5F5F5;
 }
-
 .container.download .content table {
   border-spacing: 5px;
   border-collapse: separate;
   width: 100%;
 }
-
 .container.download .content table td {
   border: 1px solid black;
   padding: 2px 5px;
   text-align: center;
 }
-
 .container.download .content table td a {
   display: inline-block;
   width: 100%;
 }
-
 .container.download .content table td:hover {
   background-color: #1CA0DA;
 }
-
 .container.download .content table td:hover a {
   color: #F5F5F5;
 }
-
 .container.download h1 {
   text-align: center;
   margin: 0px;
@@ -215,9 +183,22 @@ footer .bottom {
   background: url("/img/bg_pattern_light.png");
   padding: 0px;
 }
-
 .container.blog .content {
   background: #FFF;
   margin: 0px auto;
   padding: 10px 30px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.pagination a {
+  color: #15C;
+}
+.pagination .page-info {
+  color: #999;
 }

@@ -33,7 +33,7 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.13.0-beta6 Release Notes</h1>
+  <h1>NW.js v0.13.0-beta6 Release Notes</h1>
 <p>We are pleased to announce NW.js 0.13.0-beta6. Chromium 48 is updated to 48.0.2564.109 from 48.0.2564.97.
 Node.js is updated to v5.6.0. Multiple bugs were fixed and a few features left in 0.12 were ported.</p>
 <p>NW.js is able to support native modules built by node-gyp/npm now. &#39;nw-gyp&#39; is not needed any more. See more information here: <a href="https://groups.google.com/d/msg/nwjs-general/UqEq8ito2gI/W-ld9LSoDQAJ">https://groups.google.com/d/msg/nwjs-general/UqEq8ito2gI/W-ld9LSoDQAJ</a></p>
@@ -41,7 +41,7 @@ Node.js is updated to v5.6.0. Multiple bugs were fixed and a few features left i
 <p>Chromium 48 brings exciting changes including custom buttons in the notification; VP9 as the codec for WebRTC, see <a href="http://blog.chromium.org/2015/12/chrome-48-beta-present-to-cast-devices_91.html">http://blog.chromium.org/2015/12/chrome-48-beta-present-to-cast-devices_91.html</a> . You can use them in your NW app today.</p>
 <p>If you&#39;re new to this major new beta version 0.13, please read <a href="http://nwjs.io/blog/v0.13.0-beta1/">http://nwjs.io/blog/v0.13.0-beta1/</a></p>
 <p>An important internal change in this release is that the Window object returned by nw.Window.get() resides in the background page. It&#39;s a &#39;shadow&#39; object and its prototype points to the actual (inner) Window object in DOM context, which we returned by the function in previous releases. This change is for supporting navigation in the target window. After navigation, the previously returned Window object is still functional and its prototype is updated with the new inner Window object. This change doesn&#39;t affect our API.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Update Chromium to 48.0.2564.109</li>
 <li>Update Node.js to 5.6.0</li>
@@ -61,17 +61,17 @@ Node.js is updated to v5.6.0. Multiple bugs were fixed and a few features left i
 <li>[docs] update for new_instance etc</li>
 </ul>
 <p>Full changelog: <a href="https://github.com/nwjs/nw.js/blob/nw13/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw13/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-win-x64.zip">http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-win-x64.zip</a> </li>
 <li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-osx-x64.zip">http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-osx-x64.zip</a> </li>
-<li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-linux-x64.tar.gz</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta6/nwjs-v0.13.0-beta6-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-win-x64.zip">http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-win-x64.zip</a> </li>
 <li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-osx-x64.zip">http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-osx-x64.zip</a> </li>
-<li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-linux-x64.tar.gz</a> </li>
+<li><a href="http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-linux-x64.tar.gz">http://dl.nwjs.io/v0.13.0-beta6/nwjs-sdk-v0.13.0-beta6-linux-x64.tar.gz</a></li>
 </ul>
 <p>NaCl build and other platforms: <a href="http://dl.nwjs.io/v0.13.0-beta6/">http://dl.nwjs.io/v0.13.0-beta6/</a> </p>
 <p>There are 3 builds for each platform - normal build, sdk build and 
@@ -81,7 +81,7 @@ have more development tools to be exposed in the following releases,
 as well as the NaCl support. </p>
 <p>Our build infrastructure enables live binary build from git tip so you 
 can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a> </p>
 
   </div>

@@ -33,50 +33,48 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.106.1 Released with Node.js v25.2.1</h1>
+  <h1>NW.js v0.106.1 Released with Node.js v25.2.1</h1>
 <p>2025/12/26</p>
 <p>We are pleased to announce the release of NW.js v0.106.1. This release brings significant updates to the underlying engine and improved support for Windows on Arm.</p>
-<h3 id="key-updates">Key Updates</h3>
+<h3>Key Updates</h3>
 <ul>
 <li><strong>Node.js</strong>: Updated to v25.2.1</li>
 <li><strong>Chromium</strong>: Updated to the latest stable version 143</li>
 </ul>
-<h3 id="windows-on-arm-performance-support">Windows on Arm Performance &amp; Support</h3>
+<h3>Windows on Arm Performance &amp; Support</h3>
 <p>We would like to extend a special thank you to <strong>Orina Zhang</strong> and the <strong>Microsoft App Assure team</strong> for their collaboration and support. They assisted in testing and verifying the experimental builds of NW.js on Windows on Arm (WoA).</p>
 <p>Their extensive internal testing confirmed that the native NW.js win/arm64 binary works well and demonstrates superior performance compared to the x64 binary running on Arm hardware.</p>
 <p><strong>Benchmark Highlights:</strong>
 According to the performance results shared by the Microsoft team:</p>
-<ul>
-<li><strong>NW.js Performance:</strong> The native Arm64 build showed a <strong>36.42% (median)</strong> performance improvement compared to the x64 build on Windows on Arm.</li>
-</ul>
-<ul>
-<li><strong>Node.js Performance:</strong> In pure Node.js benchmarks, the Arm64 build demonstrated a median improvement of <strong>174.23%</strong> over the x64 version on the same hardware.</li>
-</ul>
+<p>* 
+<strong>NW.js Performance:</strong> The native Arm64 build showed a <strong>36.42% (median)</strong> performance improvement compared to the x64 build on Windows on Arm.</p>
+<p>* 
+<strong>Node.js Performance:</strong> In pure Node.js benchmarks, the Arm64 build demonstrated a median improvement of <strong>174.23%</strong> over the x64 version on the same hardware.</p>
 <p>Significant gains were observed in CPU-intensive tasks such as prime number calculations and array manipulations.</p>
 <p>We recommend developers targeting Windows on Arm devices to utilize the <code>win-arm64</code> build to take full advantage of these performance improvements.</p>
 <p>Best regards,<br>Roger Wang</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Update to Chromium 143.0.7499.170</li>
 <li>Node: update to v25.2.1</li>
 </ul>
 <p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-win-x64.zip">https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-osx-arm64.zip">https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-osx-arm64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.106.1/nwjs-v0.106.1-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-win-x64.zip">https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-osx-arm64.zip">https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-osx-arm64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.106.1/nwjs-sdk-v0.106.1-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.106.1/">https://dl.nwjs.io/v0.106.1/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/g/nwjs-general/c/I6_6q7B7N4w/m/Ibrg0fRkBAAJ">https://groups.google.com/g/nwjs-general/c/I6_6q7B7N4w/m/Ibrg0fRkBAAJ</a></p>
 
   </div>

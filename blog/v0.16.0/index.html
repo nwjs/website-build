@@ -33,13 +33,13 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.16.0 Released with Today's Chromium 52 Upgrade</h1>
+  <h1>NW.js v0.16.0 Released with Today&#39;s Chromium 52 Upgrade</h1>
 <p>2016/07/21</p>
 <p>We are happy to release NW.js 0.16.0 with today&#39;s Chromium stable 52. Node.js is updated to v6.3.0. It also contains new features and bug fixes since 0.15.4.</p>
 <p>Chromium 52 contains under-the-hood performance and stability tweaks, and some cool new features to explore. See upstream blog for exciting new features and improvements in Chromium 52: <a href="http://blog.chromium.org/2016/06/chrome-52-beta-css-containment-simpler.html">http://blog.chromium.org/2016/06/chrome-52-beta-css-containment-simpler.html</a></p>
 <p>We made the 0.16 branch ready soon after Chromium beta bumps to 52 in the same day. We&#39;ve been working on 3 branches simultaneously: a released branch on current Chromium stable, a beta branch on Chromium beta and a LTS branch which will be supported for the next 2 years.</p>
 <p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog-since-v0-15-4">ChangeLog since v0.15.4</h2>
+<h2>ChangeLog since v0.15.4</h2>
 <ul>
 <li>Update Chromium to <a href="http://googlechromereleases.blogspot.com/2016/07/stable-channel-update.html">52.0.2743.82</a></li>
 <li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v6.3.0/">6.3.0</a></li>
@@ -60,31 +60,31 @@
 <li>Fix: Window resize event returns undefined for height <a href="https://github.com/nwjs/nw.js/issues/4993">(#4993)</a></li>
 <li>Fix: can not remove shortcut key at menuItem <a href="https://github.com/nwjs/nw.js/issues/5026">(#5026)</a></li>
 <li>Fix: win.showDevTools crash with empty string id <a href="https://github.com/nwjs/nw.js/issues/5061">(#5061)</a></li>
-<li>Updated win_delay_load_hook.c to work with node-gyp@3.4.0 <a href="https://github.com/nwjs/nw.js/issues/5088">(#5088)</a></li>
+<li>Updated win_delay_load_hook.c to work with <a href="mailto:node-gyp@3.4.0">node-gyp@3.4.0</a> <a href="https://github.com/nwjs/nw.js/issues/5088">(#5088)</a></li>
 <li>[docs] margins for Window.print()</li>
 <li>[docs] Native Module building in nw15 and later</li>
 <li>[docs] fixed typos for docs <a href="https://github.com/nwjs/nw.js/issues/5091">(#5091)</a></li>
 <li>[docs] updated Quick Start section for &quot;Package and Distribute&quot; <a href="https://github.com/nwjs/nw.js/issues/5054">(#5054)</a></li>
 </ul>
 <p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/nw16/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw16/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-win-x64.zip">http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-win-x64.zip</a> </li>
 <li><a href="http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-osx-x64.zip">http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-osx-x64.zip</a> </li>
-<li><a href="http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-linux-x64.tar.gz">http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-linux-x64.tar.gz</a> </li>
+<li><a href="http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-linux-x64.tar.gz">http://dl.nwjs.io/v0.16.0/nwjs-v0.16.0-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-win-x64.zip">http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-win-x64.zip</a> </li>
 <li><a href="http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-osx-x64.zip">http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-osx-x64.zip</a> </li>
-<li><a href="http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-linux-x64.tar.gz">http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-linux-x64.tar.gz</a> </li>
+<li><a href="http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-linux-x64.tar.gz">http://dl.nwjs.io/v0.16.0/nwjs-sdk-v0.16.0-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binary for other platforms: <a href="http://dl.nwjs.io/v0.16.0/">http://dl.nwjs.io/v0.16.0/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support. The NaCl build flavor in 0.14 and 0.13 was dropped due to <a href="https://groups.google.com/d/msg/nwjs-general/uyNwqEPowd0/RfIDu1EIBQAJ">very low usage and feedback</a></p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/WCMz1BlHXKs/MKCfWBnqAgAJ">https://groups.google.com/d/msg/nwjs-general/WCMz1BlHXKs/MKCfWBnqAgAJ</a></p>
 
   </div>

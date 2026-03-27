@@ -33,7 +33,7 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.14.6 (LTS) Released with Custom Printing API</h1>
+  <h1>NW.js v0.14.6 (LTS) Released with Custom Printing API</h1>
 <p>2016/06/01</p>
 <p>NW.js 0.14.6 is released with new Custom Printing API and bug fixes. The custom printing API lets you print the web contents with many options without the need for user&#39;s interaction in the print preview UI. Currently the options supported are printer destination, media size, orientation, PDF output, CSS background removal and header/footer removal. See <a href="http://docs.nwjs.io/en/nw14/References/Window/#winprintoptions">the documentation</a> for more information.</p>
 <p>Another new feature is to specify the hostname of the chrome-extension protocol URL for your application. A new field <code>domain</code> is added to the manifest and the value will be used as the hostname of the application. Previously the hostname was generated from the <code>name</code> field of the manifest. Once it&#39;s enabled, the web engine will share the same cookies between your application and the website under the same domain.</p>
@@ -41,7 +41,7 @@
 <p>NW 0.14.x will be the long term supported (LTS) version. Chromium will stay at 50 and Node.js will stay at v5.x in 0.14. The plan is to keep active development on 0.14 for at least 1 year and then keep maintenance for another year. During this period we&#39;ll fix issues in the NW part. Backporting Chromium and Node.js fixes will be considered on request. Windows XP and Mac OSX version earlier than 10.9 will be supported in 0.14.</p>
 <p>In 2016 our release plan is to bump the major version with Chromium upstream release every 6 weeks. The stable version will keep moving with Chromium 51 in 0.15 and so on.</p>
 <p>For more information on the new milestone 0.13 and later version, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Custom Print API <a href="https://github.com/nwjs/nw.js/issues/4911">(#4911)</a></li>
 <li>Add: &#39;--disable-devtools&#39; command line for SDK build <a href="https://github.com/nwjs/nw.js/issues/4839">(#4839)</a></li>
@@ -63,24 +63,24 @@
 <li>[docs] Manifest: Using custom domain</li>
 </ul>
 <p>Full changelog: <a href="https://github.com/nwjs/nw.js/blob/nw14/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw14/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-win-x64.zip">http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-win-x64.zip</a> </li>
 <li><a href="http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-osx-x64.zip">http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-osx-x64.zip</a> </li>
-<li><a href="http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-linux-x64.tar.gz">http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-linux-x64.tar.gz</a> </li>
+<li><a href="http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-linux-x64.tar.gz">http://dl.nwjs.io/v0.14.6/nwjs-v0.14.6-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-win-x64.zip">http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-win-x64.zip</a> </li>
 <li><a href="http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-osx-x64.zip">http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-osx-x64.zip</a> </li>
-<li><a href="http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-linux-x64.tar.gz">http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-linux-x64.tar.gz</a> </li>
+<li><a href="http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-linux-x64.tar.gz">http://dl.nwjs.io/v0.14.6/nwjs-sdk-v0.14.6-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binaries for other platforms: <a href="http://dl.nwjs.io/v0.14.6/">http://dl.nwjs.io/v0.14.6/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support. The NaCl build flavor in 0.14 and 0.13 was dropped due to <a href="https://groups.google.com/d/msg/nwjs-general/uyNwqEPowd0/RfIDu1EIBQAJ">very low usage and feedback</a></p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="http://dl.nwjs.io/live-build/">http://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/TNOS1AbKxDM/vD-p7drWAQAJ">https://groups.google.com/d/msg/nwjs-general/TNOS1AbKxDM/vD-p7drWAQAJ</a></p>
 
   </div>

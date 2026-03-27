@@ -33,27 +33,27 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.28.0 Released with Chromium 64 Upgrade, Node.js 9.4.0 and Mitigations for Spectre Attacks</h1>
+  <h1>NW.js v0.28.0 Released with Chromium 64 Upgrade, Node.js 9.4.0 and Mitigations for Spectre Attacks</h1>
 <p>2018/01/24</p>
 <p>We&#39;re excited to announce NW.js 0.28.0 with Chromium 64 stable upgrade, security updates within it and Node.js 9.4.0. This new major version has new features and important changes regarding Spectre attacks. You need to read it through if you load any 3rd party contents in your application, or care about the performance implications from it.</p>
-<h2 id="mitigations-for-spectre-attacks">Mitigations for Spectre Attacks</h2>
+<h2>Mitigations for Spectre Attacks</h2>
 <p>Spectre attacks impact browsers too. After Chromium upstream announced <a href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/ssca">actions required to mitigate Speculative Side-Channel Attack techniques</a>, we took all the changes from upstream into NW.js to protect applications of our developers and end users. However, the upstream fix has a performance impact that can lead to <a href="https://github.com/v8/v8/wiki/Untrusted-code-mitigations">15% degradation on extreme computational workloads</a>. Since NW.js application code is trusted in many cases, we&#39;ve made changes so your applications are not impacted in such cases:</p>
 <ul>
 <li>If your application load untrusted content or code, you need to put them in webview, or use the global flag <code>--js-flags=--untrusted_code_mitigations</code> in Chromium arguments. There is no performance degradation for code outside the webview by default.</li>
 <li>If all your application&#39;s content and code is trusted, no action is required and no performance degradation is expected.</li>
 </ul>
-<h2 id="new-features-and-important-fixes">New Features and Important Fixes</h2>
+<h2>New Features and Important Fixes</h2>
 <ul>
 <li>A new <a href="http://nwjs.readthedocs.io/en/nw28/References/webview%20Tag/#webviewinspectelementatx-y">API <code>webview.inspectElementAt()</code></a> is added for inspecting located element from embedded devtools.</li>
 <li>Support for <a href="http://nwjs.readthedocs.io/en/nw28/References/Window/#winevalnwbinmoduleframe-path-module_path">ES6 module binary</a> is added.</li>
 <li>A <a href="http://nwjs.readthedocs.io/en/nw28/References/Changes%20to%20DOM/#attribute-nwdirectorydesc">new <code>nwdirectorydesc</code> attribute</a> is added to set the description for nwdirectory in &quot;Browse for Folder&quot; dialog.</li>
 </ul>
 <p>Thanks to Jefry Tedjokusumo, transparency clickthrough feature is fixed on macOS 10.13.</p>
-<h2 id="what-s-new-in-chromium-64">What&#39;s New in Chromium 64</h2>
+<h2>What&#39;s New in Chromium 64</h2>
 <p>Chromium 64 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports Resize Observer, import meta and many more. Please check <a href="https://developers.google.com/web/updates/2018/01/nic64">upstream information</a> for details, as well as the <a href="https://www.chromestatus.com/features#milestone%3D64">Chrome status page</a>.</p>
 <p>We&#39;ve made the 0.28 branch ready soon after Chromium beta bumps to 64. Thanks to the testers for their valuable feedback and bug reports. We&#39;ve been working on 3 branches simultaneously: a released branch on current Chromium stable, a beta branch on Chromium beta and a 0.14 branch for legacy OS support.</p>
 <p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Update Chromium to <a href="https://chromereleases.googleblog.com/2018/01/stable-channel-update-for-desktop_24.html">64.0.3282.119</a></li>
 <li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v9.4.0/">v9.4.0</a></li>
@@ -70,24 +70,24 @@
 <li>[docs] nwdirectorydesc</li>
 </ul>
 <p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/nw28/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw28/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-win-x64.zip">https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-osx-x64.zip">https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-linux-x64.tar.gz">https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-linux-x64.tar.gz">https://dl.nwjs.io/v0.28.0/nwjs-v0.28.0-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-win-x64.zip">https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-osx-x64.zip">https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-linux-x64.tar.gz">https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-linux-x64.tar.gz">https://dl.nwjs.io/v0.28.0/nwjs-sdk-v0.28.0-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.28.0/">https://dl.nwjs.io/v0.28.0/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/y9ZyE8jMRX4/xbwHAjxAAgAJ">https://groups.google.com/d/msg/nwjs-general/y9ZyE8jMRX4/xbwHAjxAAgAJ</a></p>
 
   </div>

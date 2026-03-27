@@ -2,7 +2,7 @@ function getJSON(url, cb) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.send();
-    xhr.onload = function () {
+    xhr.onload = function() {
         try {
             cb(null, JSON.parse(xhr.responseText));
         } catch (e) {

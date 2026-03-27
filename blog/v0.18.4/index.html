@@ -33,37 +33,37 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.18.4 Released with Node.js working in Web Workers</h1>
+  <h1>NW.js v0.18.4 Released with Node.js working in Web Workers</h1>
 <p>2016/10/31</p>
 <p>We are happy to announce NW.js 0.18.4 with Node.js working in Web Workers.</p>
 <p>To enable this feature, use command line argument <code>--enable-node-worker</code>. One of the best things about it is that you can offload CPU hogging tasks with new threads, while <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">exchange large amount of data</a> with DOM efficiently with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm.</p>
 <p>Starting from day 1 of our mission, we want to provide JavaScript programmers capabilities of writing native applications as C/C++ programmers can do. Besides the <a href="http://docs.nwjs.io/en/latest/For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">source code protection feature</a>, writing multi-threaded applications is one of them, to utilize modern multi-core CPUs and keep your application responsive. Read the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">guide on Web Workers</a> and you can just use Node within it.</p>
 <p>Please note that binary modules of Node.js need to be thread-safe to be used in this way. We&#39;ve made modifications to Node.js core to make sure core APIs are thread-safe, while we can not promise this with 3rd party binary modules. Pure JS modules are thread safe as long as they depends on thread-safe modules only. And there shouldn&#39;t be any side effect when the feature is not turned on.</p>
 <p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Support Node.js in Web Workers <a href="https://github.com/nwjs/nw.js/issues/494">(#494)</a></li>
 <li>[docs] --enable-node-worker in Command Line Options</li>
 </ul>
 <p>Full changelog: <a href="https://github.com/nwjs/nw.js/blob/nw18/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw18/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-win-x64.zip">https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-osx-x64.zip">https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-linux-x64.tar.gz">https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-linux-x64.tar.gz">https://dl.nwjs.io/v0.18.4/nwjs-v0.18.4-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-win-x64.zip">https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-osx-x64.zip">https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-linux-x64.tar.gz">https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-linux-x64.tar.gz">https://dl.nwjs.io/v0.18.4/nwjs-sdk-v0.18.4-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binaries for other platforms: <a href="https://dl.nwjs.io/v0.18.4/">https://dl.nwjs.io/v0.18.4/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/jljGxjIyxK4/pVqyidTrBAAJ">https://groups.google.com/d/msg/nwjs-general/jljGxjIyxK4/pVqyidTrBAAJ</a></p>
 
   </div>

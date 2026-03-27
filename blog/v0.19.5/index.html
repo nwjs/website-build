@@ -33,19 +33,19 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.19.5 Released with Node.js Support in WebView</h1>
+  <h1>NW.js v0.19.5 Released with Node.js Support in WebView</h1>
 <p>2017/01/10</p>
 <p>NW.js 0.19.5 is released with 2 new features: Node.js Support in WebView; Accessing DOM from VM context of Node.</p>
 <p>To enable Node.js support in WebView, add the allownw attribute to the webview tag. Then Node.js will be turned on, no matter it loads local file or remote site. Use this feature with caution because webview is normally supposed to load untrusted contents.</p>
 <p>Now you can access DOM from VM context of Node. In other words, the following code should work now. Previously it just crash:</p>
-<pre><code class="lang-js">var vm = require(&#39;vm&#39;);
+<pre><code class="language-js">var vm = require(&#39;vm&#39;);
 var c = new vm.createContext({e: document.body});
 var script = new vm.Script(&#39;e.style&#39;);
 script.runInContext(c);
 </code></pre>
 <p>NW19 features Chromium 55, which contains under-the-hood performance and stability tweaks, and some cool new features to explore like input handling improvements. See the <a href="https://blog.chromium.org/2016/10/chrome-55-beta-input-handling.html">upstream announcement</a> for more information. NW19 also features <a href="http://v8project.blogspot.com/2016/10/v8-release-55.html">V8 5.5, which ships support for JavaScript&#39;s async/await &amp; has 35% less memory consumption on low-memory devices</a>.</p>
 <p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v7.4.0/">7.4.0</a></li>
 <li>Node.js integration is supported in webview <a href="https://github.com/nwjs/nw.js/issues/4780">(#4780)</a></li>
@@ -54,24 +54,24 @@ script.runInContext(c);
 <li>[docs] Node.js support in webview</li>
 </ul>
 <p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/nw19/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw19/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-win-x64.zip">https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-osx-x64.zip">https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-linux-x64.tar.gz">https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-linux-x64.tar.gz">https://dl.nwjs.io/v0.19.5/nwjs-v0.19.5-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-win-x64.zip">https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-osx-x64.zip">https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-linux-x64.tar.gz">https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-linux-x64.tar.gz">https://dl.nwjs.io/v0.19.5/nwjs-sdk-v0.19.5-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.19.5/">https://dl.nwjs.io/v0.19.5/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/GVgCx5NV1Bc/Rpamobg5BgAJ">https://groups.google.com/d/msg/nwjs-general/GVgCx5NV1Bc/Rpamobg5BgAJ</a></p>
 
   </div>

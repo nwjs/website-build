@@ -33,7 +33,7 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.20.3 Released with Node.js v7.6.0, More Print Options and Better Proxy Support</h1>
+  <h1>NW.js v0.20.3 Released with Node.js v7.6.0, More Print Options and Better Proxy Support</h1>
 <p>2017/02/23</p>
 <p>NW.js 0.20.3 is here with multiple bug fixes and more features on the stable branch. Node.js was updated to v7.6.0</p>
 <ul>
@@ -47,7 +47,7 @@
 <p>Chromium 56 introduces an optimization to save CPU when tabs are in the background. It&#39;s done by <a href="https://docs.google.com/document/d/1vCUeGfr2xzZ67SFt2yZjNeaIcXGp2Td6KHN7bI02ySo/edit">throttling background tabs&#39; timers</a>. See <a href="http://blog.strml.net/2017/01/chrome-56-now-aggressively-throttles.html">this blog post</a> for more information. If you don&#39;t want this in your NW.js application, you can use the <a href="http://docs.nwjs.io/en/latest/References/Command%20Line%20Options/#-disable-raf-throttling">--disable-raf-throttling switch</a> to disable it.</p>
 <p>We&#39;ve been working on 3 branches simultaneously: a released branch on current Chromium stable, a beta branch on Chromium beta and a 0.14 branch for legacy OS support.</p>
 <p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v7.6.0/">v7.6.0</a></li>
 <li>Support passing Buffer or ArrayBuffer to evalNWBin <a href="https://github.com/nwjs/nw.js/issues/5220">(#5220)</a></li>
@@ -56,29 +56,29 @@
 <li>Fix: nwuseragent not working after 0.13 <a href="https://github.com/nwjs/nw.js/issues/5397">(#5397)</a></li>
 <li>Fix: flash in embed or object tag not working using file protocol <a href="https://github.com/nwjs/nw.js/issues/5706">(#5706)</a></li>
 <li>Fix: multiple menu shortcuts issues <a href="https://github.com/nwjs/nw.js/issues/5657">(#5657)</a></li>
-<li>Disable resolving www.google.com in DNS predictor on startup</li>
+<li>Disable resolving <a href="http://www.google.com">www.google.com</a> in DNS predictor on startup</li>
 <li>[docs] upstream Windows build instructions has moved</li>
 <li>[docs] update for new features</li>
 </ul>
 <p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/nw20/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw20/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-win-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-osx-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.3/nwjs-v0.20.3-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-win-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-osx-x64.zip">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.3/nwjs-sdk-v0.20.3-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.20.3/">https://dl.nwjs.io/v0.20.3/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/UsnHwdLJV28/01vBrrheAQAJ">https://groups.google.com/d/msg/nwjs-general/UsnHwdLJV28/01vBrrheAQAJ</a></p>
 
   </div>

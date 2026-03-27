@@ -33,13 +33,13 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js will continue supporting Chrome Apps</h1>
+  <h1>NW.js will continue supporting Chrome Apps</h1>
 <p>2016/08/20</p>
 <p>Today our upstream made an <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">announcement</a> about their plan on Chrome Apps, in which Chrome Apps will not be supported on Win, Linux and macOS.</p>
 <p>NW.js can run Chrome Apps directly and we&#39;ll continue supporting it. Chrome App developers can redistribute their application after packaging with NW.</p>
-<p><a href="/blog/whats-new-in-0.13">Staring from version 0.13</a>, NW.js brings most features in the Chromium browser, including Chrome Apps support, chrome.<em> platform APIs. We support all `chrome.</em>` API in the <a href="https://developer.chrome.com/apps/api_index">Chrome App platform</a>. In addition, we support some chrome.* API in the <a href="https://developer.chrome.com/extensions/api_index">Extension Platform</a>. </p>
+<p><a href="/blog/whats-new-in-0.13">Staring from version 0.13</a>, NW.js brings most features in the Chromium browser, including Chrome Apps support, chrome.* platform APIs. We support all <code>chrome.*</code> API in the <a href="https://developer.chrome.com/apps/api_index">Chrome App platform</a>. In addition, we support some chrome.* API in the <a href="https://developer.chrome.com/extensions/api_index">Extension Platform</a>. </p>
 <p>Chrome Apps can be run directly on NW. Clone the <a href="https://github.com/GoogleChrome/chrome-app-samples">sample apps repository</a> and run one of them with:</p>
-<pre><code class="lang-bash">$ /path/to/nw.exe &lt;folder path of the manifest.json file&gt;
+<pre><code class="language-bash">$ /path/to/nw.exe &lt;folder path of the manifest.json file&gt;
 </code></pre>
 <p>or drag the folder to the NW executable. And of course Node.js APIs can be accessed from Chrome App: add “node” permission to manifest.json and you are ready to call nw.require().</p>
 <p>For more information, see <a href="/blog/whats-new-in-0.13">What&#39;s new in 0.13</a></p>

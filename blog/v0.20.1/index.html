@@ -33,7 +33,7 @@
   </header>
   <div class="container blog">
   <div class="content">
-  <h1 id="-title-">NW.js v0.20.1 Released with Node.js v7.5.0 and Chromium 56 Stable Update</h1>
+  <h1>NW.js v0.20.1 Released with Node.js v7.5.0 and Chromium 56 Stable Update</h1>
 <p>2017/02/02</p>
 <p>NW.js 0.20.1 is here with Chromium 56 stable update and Node.js v7.5.0. It added <a href="http://docs.nwjs.io/en/nw20/References/Command%20Line%20Options/#-disable-crash-handlertrue">a command line switch</a> to fix single process mode under windows.</p>
 <p>Chromium 56 contains under-the-hood performance and stability tweaks, and some cool new features to explore like CSS position: sticky and Web Bluetooth. See the <a href="https://blog.chromium.org/2016/12/chrome-56-beta-not-secure-warning-web.html">upstream announcement</a> for more information. NW20 also features <a href="http://v8project.blogspot.com/2016/12/v8-release-56.html">V8 5.6, which delivers a number of key improvements in memory and performance footprint, as well as Ignition and TurboFan pipeline for ES.next</a>. This version is going to ship the WebAssembly browser preview, which is a new runtime and compilation target for the web. Please refer to the <a href="http://v8project.blogspot.de/2016/10/webassembly-browser-preview.html">dedicated upstream blog post</a> for further information.</p>
@@ -41,7 +41,7 @@
 <p>We&#39;ve made the 0.20 branch ready soon after Chromium beta bumps to 56. Thanks to the testers for their valuable feedback.</p>
 <p>We&#39;ve been working on 3 branches simultaneously: a released branch on current Chromium stable, a beta branch on Chromium beta and a 0.14 branch for legacy OS support.</p>
 <p>For more information on the new milestone 0.13 and later versions, please see <a href="/blog/whats-new-in-0.13">our blog &quot;What&#39;s New in 0.13&quot;</a> for a better introduction.</p>
-<h2 id="changelog">ChangeLog</h2>
+<h2>ChangeLog</h2>
 <ul>
 <li>Update Chromium to <a href="https://chromereleases.googleblog.com/2017/02/stable-channel-update-for-desktop.html">56.0.2924.87</a></li>
 <li>Update Node.js to <a href="https://nodejs.org/en/blog/release/v7.5.0/">v7.5.0</a></li>
@@ -49,24 +49,24 @@
 <li>[docs] Added documentation for `disable-crash-handler&#39; switch</li>
 </ul>
 <p>Full ChangeLog: <a href="https://github.com/nwjs/nw.js/blob/nw20/CHANGELOG.md">https://github.com/nwjs/nw.js/blob/nw20/CHANGELOG.md</a></p>
-<h2 id="download">Download</h2>
+<h2>Download</h2>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-win-x64.zip">https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-osx-x64.zip">https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.1/nwjs-v0.20.1-linux-x64.tar.gz</a></li>
 </ul>
 <p>SDK build: </p>
 <ul>
 <li><a href="https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-win-x64.zip">https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-win-x64.zip</a> </li>
 <li><a href="https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-osx-x64.zip">https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-osx-x64.zip</a> </li>
-<li><a href="https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-linux-x64.tar.gz</a> </li>
+<li><a href="https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-linux-x64.tar.gz">https://dl.nwjs.io/v0.20.1/nwjs-sdk-v0.20.1-linux-x64.tar.gz</a></li>
 </ul>
 <p>Binary for other platforms: <a href="https://dl.nwjs.io/v0.20.1/">https://dl.nwjs.io/v0.20.1/</a> </p>
 <p>There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.</p>
 <p>Our build infrastructure enables live binary build from git tip so you can access to the latest binary from <a href="https://dl.nwjs.io/live-build/">https://dl.nwjs.io/live-build/</a> </p>
-<h2 id="known-issues">Known issues</h2>
+<h2>Known issues</h2>
 <p><a href="http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues">http://docs.nwjs.io/en/latest/For%20Users/Migration/From%200.12%20to%200.13/#known-issues</a></p>
-<h2 id="discussion">Discussion</h2>
+<h2>Discussion</h2>
 <p>See our mailing list to discuss on this release: <a href="https://groups.google.com/d/msg/nwjs-general/qdw0ZDMvfqw/dl2r5t3IBwAJ">https://groups.google.com/d/msg/nwjs-general/qdw0ZDMvfqw/dl2r5t3IBwAJ</a></p>
 
   </div>
