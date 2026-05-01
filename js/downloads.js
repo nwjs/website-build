@@ -11,6 +11,7 @@
         return ".zip";
       case "linux-x64":
       case "linux-ia32":
+      case "linux-arm64":
         return ".tar.gz";
     }
   }
@@ -22,7 +23,8 @@
     "osx-x64": "Mac OS X 64-bit",
     "osx-arm64": "Mac OS X ARM64",
     "linux-x64": "Linux 64-bit",
-    "linux-ia32": "Linux 32-bit"
+    "linux-ia32": "Linux 32-bit",
+    "linux-arm64": "Linux ARM64"
   };
   function name(file) {
     return file2name[file];
