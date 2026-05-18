@@ -6,6 +6,44 @@
     <atom:link href="http://nwjs.io/feed/blog.xml" rel="self" type="application/rss+xml"/>
     <description>NW.js Blog</description>
     <item>
+      <title>NW.js v0.111.3 Released with Node.js v26.1.0 and Node-gyp Compatible Headers</title>
+      <link>http://nwjs.io/blog/v0.111.3/</link>
+      <guid>http://nwjs.io/blog/v0.111.3/</guid>
+      <description>&lt;h1&gt;NW.js v0.111.3 Released with Node.js v26.1.0 and Node-gyp Compatible Headers&lt;/h1&gt;
+&lt;p&gt;2026/05/17&lt;/p&gt;
+&lt;p&gt;NW.js 0.111.3 is released with Node.js v26.1.0 update, DevTools extension fixes, and native module building support. This release renames the headers tarball to node-v&lt;VERSION&gt;.tar.gz with a node-gyp-compatible structure, now supporting upstream npm and node-gyp for native module building.&lt;/p&gt;
+&lt;p&gt;In NW v0.111, Chromium 148 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports &lt;strong&gt;HTML-in-Canvas, Name-only container queries in CSS, Lazy load video and audio elements, Prompt API for on-device AI language model access&lt;/strong&gt; and much more. Please check &lt;a href=&quot;https://developer.chrome.com/blog/chrome-148-beta/&quot;&gt;upstream release notes&lt;/a&gt; for details. For a complete list of all features (including experimental features) in this release, see the &lt;a href=&quot;https://www.chromestatus.com/features#milestone=148&quot;&gt;Chrome 148 milestone hotlist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We&amp;#39;ve made the 0.111 branch ready soon after Chromium beta bumps to 148. Thanks to the testers for their valuable feedback and bug reports. We&amp;#39;ve been working on 2 branches simultaneously: a released branch on the current Chromium stable and a beta branch on Chromium beta.&lt;/p&gt;
+&lt;p&gt;Best regards,
+NW.js maintainers&lt;/p&gt;
+&lt;h2&gt;ChangeLog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node: update to v26.1.0&lt;/li&gt;
+&lt;li&gt;Fix: allow DevTools extensions to load their own subresources&lt;/li&gt;
+&lt;li&gt;Fix: show device chooser dialog for nwjs popup windows (#7215)&lt;/li&gt;
+&lt;li&gt;Rename headers tarball to node-v&lt;VERSION&gt;.tar.gz with node-gyp-compatible structure; now we support upstream npm and node-gyp for native module building&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full ChangeLog: &lt;a href=&quot;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&quot;&gt;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Download&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.111.3/nwjs-v0.111.3-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.111.3/nwjs-v0.111.3-win-x64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.111.3/nwjs-v0.111.3-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.111.3/nwjs-v0.111.3-osx-arm64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.111.3/nwjs-v0.111.3-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.111.3/nwjs-v0.111.3-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SDK build:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.111.3/nwjs-sdk-v0.111.3-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.111.3/nwjs-sdk-v0.111.3-win-x64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.111.3/nwjs-sdk-v0.111.3-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.111.3/nwjs-sdk-v0.111.3-osx-arm64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.111.3/nwjs-sdk-v0.111.3-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.111.3/nwjs-sdk-v0.111.3-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Binary for other platforms: &lt;a href=&quot;https://dl.nwjs.io/v0.111.3/&quot;&gt;https://dl.nwjs.io/v0.111.3/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&amp;#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.&lt;/p&gt;
+&lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general&quot;&gt;https://groups.google.com/g/nwjs-general&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>NW.js v0.111.2 Released with Node.js v26.0.0 Update and Bug Fixes</title>
       <link>http://nwjs.io/blog/v0.111.2/</link>
       <guid>http://nwjs.io/blog/v0.111.2/</guid>
@@ -709,28 +747,6 @@ According to the performance results shared by the Microsoft team:&lt;/p&gt;
 &lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt; &lt;/p&gt;
 &lt;h2&gt;Discussion&lt;/h2&gt;
 &lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general/c/jBDwCt_9Epk/m/nhaDnCYjBQAJ&quot;&gt;https://groups.google.com/g/nwjs-general/c/jBDwCt_9Epk/m/nhaDnCYjBQAJ&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Headless Support and Next Steps</title>
-      <link>http://nwjs.io/blog/headless/</link>
-      <guid>http://nwjs.io/blog/headless/</guid>
-      <description>&lt;h1&gt;Headless Support and Next Steps&lt;/h1&gt;
-&lt;p&gt;2025/06/30&lt;/p&gt;
-&lt;p&gt;I&amp;#39;m pleased to announce that NW.js supports headless mode now. To use it, put &lt;code&gt;--headless&lt;/code&gt; in the command line arguments.&lt;/p&gt;
-&lt;p&gt;See the original discussion on this feature: &lt;a href=&quot;https://github.com/nwjs/nw.js/issues/769&quot;&gt;https://github.com/nwjs/nw.js/issues/769&lt;/a&gt; . If you find any problems, please let me know by filing a new issue.&lt;/p&gt;
-&lt;p&gt;This functionality was implemented to support running NW.js in environments without a graphical interface, which opens it up for server-side tasks.&lt;/p&gt;
-&lt;p&gt;This new capability puts NW.js in a similar category as other browser automation tools. The key differentiator for our project remains the direct integration of the Node.js context with the DOM, which could be a significant technical advantage for certain applications.&lt;/p&gt;
-&lt;p&gt;To guide future development efforts, I am seeking input from the community on what to prioritize next for headless and command-line usage.&lt;/p&gt;
-&lt;p&gt;One initial proposal under consideration is to redirect the browser process stdin/stdout to the web engine&amp;#39;s JavaScript context. This would allow an NW.js application to be used in shell pipelines and behave more like a standard command-line executable, which could be useful for scripting and automation. It will enable the redirecting stdin/stdout in the Chromium browser process to the Node.js residing in the Web engine so using it will feel more like using Node.js from terminal. plus you can call all the nw.* and DOM APIs from there.&lt;/p&gt;
-&lt;p&gt;This is just one potential direction. I am interested in collecting other ideas and understanding your requirements.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What specific use cases do you have for running NW.js in a headless environment?&lt;/li&gt;
-&lt;li&gt;Are there technical blockers or missing features that currently prevent you from using it for automation or server-side tasks?&lt;/li&gt;
-&lt;li&gt;What APIs or tooling would be most beneficial for your projects?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Please share your thoughts and proposals on &lt;a href=&quot;https://groups.google.com/g/nwjs-general/c/dEVg7vmtvlg/m/6iFOtgB7AgAJ&quot;&gt;this thread&lt;/a&gt;. Your feedback will be valuable for planning the project&amp;#39;s roadmap.&lt;/p&gt;
-&lt;p&gt;Best regards,&lt;br&gt;Roger Wang&lt;/p&gt;
 </description>
     </item>
   </channel>
