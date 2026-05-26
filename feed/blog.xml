@@ -6,6 +6,43 @@
     <atom:link href="http://nwjs.io/feed/blog.xml" rel="self" type="application/rss+xml"/>
     <description>NW.js Blog</description>
     <item>
+      <title>NW.js v0.112.0 Released with Chromium 149</title>
+      <link>http://nwjs.io/blog/v0.112.0/</link>
+      <guid>http://nwjs.io/blog/v0.112.0/</guid>
+      <description>&lt;h1&gt;NW.js v0.112.0 Released with Chromium 149&lt;/h1&gt;
+&lt;p&gt;2026/05/24&lt;/p&gt;
+&lt;p&gt;We are pleased to announce NW 0.112.0 with Chromium 149.&lt;/p&gt;
+&lt;p&gt;In this release, the pointer lock behavior has been improved: ESC no longer automatically ends pointer lock. Instead, the ESC key event reaches the renderer during pointer lock so JavaScript can call &lt;code&gt;event.preventDefault()&lt;/code&gt; in the keydown handler to keep the lock. The lock is only broken when the page does not consume the event. The 1.25s cooldown on re-lock has also been removed (#7907).&lt;/p&gt;
+&lt;p&gt;In NW v0.112, Chromium 149 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports &lt;strong&gt;CSS gap decorations for grid and flexbox layouts, Programmatic scroll promises returning Promise objects for smooth-scroll completion, CSS &lt;code&gt;path-length&lt;/code&gt; property for SVG animation and styling&lt;/strong&gt; and much more. Please check &lt;a href=&quot;https://developer.chrome.com/blog/chrome-149-beta/&quot;&gt;upstream release notes&lt;/a&gt; for details. For a complete list of all features (including experimental features) in this release, see the &lt;a href=&quot;https://www.chromestatus.com/features#milestone=149&quot;&gt;Chrome 149 milestone hotlist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We&amp;#39;ve made the 0.112 branch ready soon after Chromium beta bumps to 149. Thanks to the testers for their valuable feedback and bug reports. We&amp;#39;ve been working on 2 branches simultaneously: a released branch on the current Chromium stable and a beta branch on Chromium beta.&lt;/p&gt;
+&lt;p&gt;Best regards,
+NW.js maintainers&lt;/p&gt;
+&lt;h2&gt;ChangeLog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Update to Chromium 149.0.7827.29&lt;/li&gt;
+&lt;li&gt;Fix: disable ESC to automatically end requestPointerLock by calling &lt;code&gt;event.preventDefault()&lt;/code&gt; in keydown handler (#7907)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full ChangeLog: &lt;a href=&quot;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&quot;&gt;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Download&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.112.0/nwjs-v0.112.0-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.112.0/nwjs-v0.112.0-win-x64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.112.0/nwjs-v0.112.0-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.112.0/nwjs-v0.112.0-osx-arm64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.112.0/nwjs-v0.112.0-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.112.0/nwjs-v0.112.0-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SDK build:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.112.0/nwjs-sdk-v0.112.0-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.112.0/nwjs-sdk-v0.112.0-win-x64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.112.0/nwjs-sdk-v0.112.0-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.112.0/nwjs-sdk-v0.112.0-osx-arm64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.112.0/nwjs-sdk-v0.112.0-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.112.0/nwjs-sdk-v0.112.0-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Binary for other platforms: &lt;a href=&quot;https://dl.nwjs.io/v0.112.0/&quot;&gt;https://dl.nwjs.io/v0.112.0/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&amp;#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.&lt;/p&gt;
+&lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general&quot;&gt;https://groups.google.com/g/nwjs-general&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>NW.js v0.111.3 Released with Node.js v26.1.0 and Node-gyp Compatible Headers</title>
       <link>http://nwjs.io/blog/v0.111.3/</link>
       <guid>http://nwjs.io/blog/v0.111.3/</guid>
@@ -712,41 +749,6 @@ According to the performance results shared by the Microsoft team:&lt;/p&gt;
 &lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt; &lt;/p&gt;
 &lt;h2&gt;Discussion&lt;/h2&gt;
 &lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general/c/3WkmSoIlFuA/m/zmqeGX3BBQAJ&quot;&gt;https://groups.google.com/g/nwjs-general/c/3WkmSoIlFuA/m/zmqeGX3BBQAJ&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>NW.js v0.101.2 Released with Chromium Security Update</title>
-      <link>http://nwjs.io/blog/v0.101.2/</link>
-      <guid>http://nwjs.io/blog/v0.101.2/</guid>
-      <description>&lt;h1&gt;NW.js v0.101.2 Released with Chromium Security Update&lt;/h1&gt;
-&lt;p&gt;2025/07/03&lt;/p&gt;
-&lt;p&gt;NW 0.101.2 is released with Chromium 138.0.7204.97 security update. Google Chrome has recently released security updates to address a high-severity vulnerability that was actively being exploited in the wild. The zero-day vulnerability, tracked as CVE-2025-6554, has been described as a type confusing flaw in the V8 JavaScript and WebAssembly engine.&lt;/p&gt;
-&lt;p&gt;&amp;quot;Type confusion in V8 in Google Chrome prior to 138.0.7204.96 allowed a remote attacker to perform arbitrary read/write via a crafted HTML page,&amp;quot; according to a description of the bug on the NIST&amp;#39;s National Vulnerability Database (NVD).&lt;/p&gt;
-&lt;p&gt;In NW v0.101, Chromium 138 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports &lt;strong&gt;new CSS features, video frame orientation metadata to WebCodecs&lt;/strong&gt; and much more. Please check &lt;a href=&quot;https://developer.chrome.com/blog/chrome-138-beta/&quot;&gt;upstream release notes&lt;/a&gt; for details. For a complete list of all features (including experimental features) in this release, see the &lt;a href=&quot;https://www.chromestatus.com/features#milestone=138&quot;&gt;Chrome 138 milestone hotlist&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I&amp;#39;ve made the 0.101 branch ready soon after Chromium beta bumps to 138. Thanks to the testers for their valuable feedback and bug reports. I&amp;#39;ve been working on 2 branches simultaneously: a released branch on the current Chromium stable and a beta branch on Chromium beta.&lt;/p&gt;
-&lt;p&gt;Best regards,&lt;br&gt;Roger Wang&lt;/p&gt;
-&lt;h2&gt;ChangeLog&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Update Chromium to 138.0.7204.97&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full ChangeLog: &lt;a href=&quot;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&quot;&gt;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Download&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.101.2/nwjs-v0.101.2-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.101.2/nwjs-v0.101.2-win-x64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.101.2/nwjs-v0.101.2-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.101.2/nwjs-v0.101.2-osx-arm64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.101.2/nwjs-v0.101.2-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.101.2/nwjs-v0.101.2-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;SDK build: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.101.2/nwjs-sdk-v0.101.2-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.101.2/nwjs-sdk-v0.101.2-win-x64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.101.2/nwjs-sdk-v0.101.2-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.101.2/nwjs-sdk-v0.101.2-osx-arm64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.101.2/nwjs-sdk-v0.101.2-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.101.2/nwjs-sdk-v0.101.2-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Binary for other platforms: &lt;a href=&quot;https://dl.nwjs.io/v0.101.2/&quot;&gt;https://dl.nwjs.io/v0.101.2/&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&amp;#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.&lt;/p&gt;
-&lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt; &lt;/p&gt;
-&lt;h2&gt;Discussion&lt;/h2&gt;
-&lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general/c/jBDwCt_9Epk/m/nhaDnCYjBQAJ&quot;&gt;https://groups.google.com/g/nwjs-general/c/jBDwCt_9Epk/m/nhaDnCYjBQAJ&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
   </channel>
