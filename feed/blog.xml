@@ -6,6 +6,41 @@
     <atom:link href="http://nwjs.io/feed/blog.xml" rel="self" type="application/rss+xml"/>
     <description>NW.js Blog</description>
     <item>
+      <title>NW.js v0.113.0 Released with Chromium 150</title>
+      <link>http://nwjs.io/blog/v0.113.0/</link>
+      <guid>http://nwjs.io/blog/v0.113.0/</guid>
+      <description>&lt;h1&gt;NW.js v0.113.0 Released with Chromium 150&lt;/h1&gt;
+&lt;p&gt;2026/07/02&lt;/p&gt;
+&lt;p&gt;We are pleased to announce NW 0.113.0 with Chromium 150.&lt;/p&gt;
+&lt;p&gt;In NW v0.113, Chromium 150 contains the usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports the &lt;strong&gt;CSS &lt;code&gt;text-fit&lt;/code&gt; property for automatically scaling font size to fill a container, URL request modifiers (&lt;code&gt;cross-origin()&lt;/code&gt;, &lt;code&gt;integrity()&lt;/code&gt;, &lt;code&gt;referrer-policy()&lt;/code&gt;) in the &lt;code&gt;url()&lt;/code&gt; function, media element pseudo-classes such as &lt;code&gt;:playing&lt;/code&gt;, &lt;code&gt;:paused&lt;/code&gt;, and &lt;code&gt;:muted&lt;/code&gt; for styling &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;, and programmatic scroll promises that resolve when a smooth scroll completes&lt;/strong&gt;. Chromium&amp;#39;s IndexedDB is now also built on a SQLite backend for better reliability and performance. Please check &lt;a href=&quot;https://developer.chrome.com/blog/chrome-150-beta&quot;&gt;upstream release notes&lt;/a&gt; for details. For a complete list of all features (including experimental features) in this release, see the &lt;a href=&quot;https://www.chromestatus.com/features#milestone=150&quot;&gt;Chrome 150 milestone hotlist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We&amp;#39;ve made the 0.113 branch ready soon after Chromium beta bumps to 150. Thanks to the testers for their valuable feedback and bug reports. We&amp;#39;ve been working on 2 branches simultaneously: a released branch on the current Chromium stable and a beta branch on Chromium beta.&lt;/p&gt;
+&lt;p&gt;Best regards,
+NW.js maintainers&lt;/p&gt;
+&lt;h2&gt;ChangeLog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Update to Chromium 150.0.7871.46&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full ChangeLog: &lt;a href=&quot;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&quot;&gt;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Download&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.113.0/nwjs-v0.113.0-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.113.0/nwjs-v0.113.0-win-x64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.113.0/nwjs-v0.113.0-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.113.0/nwjs-v0.113.0-osx-arm64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.113.0/nwjs-v0.113.0-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.113.0/nwjs-v0.113.0-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SDK build:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.113.0/nwjs-sdk-v0.113.0-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.113.0/nwjs-sdk-v0.113.0-win-x64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.113.0/nwjs-sdk-v0.113.0-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.113.0/nwjs-sdk-v0.113.0-osx-arm64.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.113.0/nwjs-sdk-v0.113.0-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.113.0/nwjs-sdk-v0.113.0-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Binary for other platforms: &lt;a href=&quot;https://dl.nwjs.io/v0.113.0/&quot;&gt;https://dl.nwjs.io/v0.113.0/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&amp;#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.&lt;/p&gt;
+&lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general&quot;&gt;https://groups.google.com/g/nwjs-general&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>NW.js v0.112.0 Released with Chromium 149</title>
       <link>http://nwjs.io/blog/v0.112.0/</link>
       <guid>http://nwjs.io/blog/v0.112.0/</guid>
@@ -713,42 +748,6 @@ According to the performance results shared by the Microsoft team:&lt;/p&gt;
 &lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt; &lt;/p&gt;
 &lt;h2&gt;Discussion&lt;/h2&gt;
 &lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general/c/J4kVwTx8gD0/m/SkbDfsHdCQAJ&quot;&gt;https://groups.google.com/g/nwjs-general/c/J4kVwTx8gD0/m/SkbDfsHdCQAJ&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>NW.js v0.102.0 Released with Chromium 139</title>
-      <link>http://nwjs.io/blog/v0.102.0/</link>
-      <guid>http://nwjs.io/blog/v0.102.0/</guid>
-      <description>&lt;h1&gt;NW.js v0.102.0 Released with Chromium 139&lt;/h1&gt;
-&lt;p&gt;2025/07/31&lt;/p&gt;
-&lt;p&gt;I&amp;#39;m pleased to announce NW 0.102.0 with Chromium 139 stable upgrade. Per upstream, Chromium 139 requires at least macOS 12.&lt;/p&gt;
-&lt;p&gt;In NW v0.102, Chromium 139 contains usual under-the-hood performance and stability tweaks, but there are also some cool new features to explore. It supports &lt;strong&gt;new CSS features, async attribute for SVG script elements, On-device Web Speech API&lt;/strong&gt; and much more. Please check &lt;a href=&quot;https://developer.chrome.com/blog/chrome-139-beta/&quot;&gt;upstream release notes&lt;/a&gt; for details. For a complete list of all features (including experimental features) in this release, see the &lt;a href=&quot;https://www.chromestatus.com/features#milestone=139&quot;&gt;Chrome 139 milestone hotlist&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I&amp;#39;ve made the 0.102 branch ready soon after Chromium beta bumps to 139. Thanks to the testers for their valuable feedback and bug reports. I&amp;#39;ve been working on 2 branches simultaneously: a released branch on the current Chromium stable and a beta branch on Chromium beta.&lt;/p&gt;
-&lt;p&gt;Best regards,&lt;br&gt;Roger Wang&lt;/p&gt;
-&lt;h2&gt;ChangeLog&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;update to Chromium 139.0.7258.66&lt;/li&gt;
-&lt;li&gt;Fix: runtime.reload() with devtools opening &lt;a href=&quot;https://github.com/nwjs/nw.js/issues/8243&quot;&gt;(#8243)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix pdf viewer UI: window.localStorage is null &lt;a href=&quot;https://github.com/nwjs/nw.js/issues/8280&quot;&gt;(#8280)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full ChangeLog: &lt;a href=&quot;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&quot;&gt;https://github.com/nwjs/nw.js/blob/main/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Download&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.102.0/nwjs-v0.102.0-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.102.0/nwjs-v0.102.0-win-x64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.102.0/nwjs-v0.102.0-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.102.0/nwjs-v0.102.0-osx-arm64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.102.0/nwjs-v0.102.0-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.102.0/nwjs-v0.102.0-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;SDK build: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.102.0/nwjs-sdk-v0.102.0-win-x64.zip&quot;&gt;https://dl.nwjs.io/v0.102.0/nwjs-sdk-v0.102.0-win-x64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.102.0/nwjs-sdk-v0.102.0-osx-arm64.zip&quot;&gt;https://dl.nwjs.io/v0.102.0/nwjs-sdk-v0.102.0-osx-arm64.zip&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dl.nwjs.io/v0.102.0/nwjs-sdk-v0.102.0-linux-x64.tar.gz&quot;&gt;https://dl.nwjs.io/v0.102.0/nwjs-sdk-v0.102.0-linux-x64.tar.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Binary for other platforms: &lt;a href=&quot;https://dl.nwjs.io/v0.102.0/&quot;&gt;https://dl.nwjs.io/v0.102.0/&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;There are 2 builds for each platform - normal build, and SDK build. Normal build doesn&amp;#39;t have devtools, only SDK build does. lt can be opened by pressing F12 (Cmd-Alt-I on OSX). SDK packages also have more development tools to be exposed in the following releases, as well as the NaCl support.&lt;/p&gt;
-&lt;p&gt;Our build infrastructure enables live binary build from git tip so you can access to the latest binary from &lt;a href=&quot;https://dl.nwjs.io/live-build/&quot;&gt;https://dl.nwjs.io/live-build/&lt;/a&gt; &lt;/p&gt;
-&lt;h2&gt;Discussion&lt;/h2&gt;
-&lt;p&gt;See our mailing list to discuss on this release: &lt;a href=&quot;https://groups.google.com/g/nwjs-general/c/3WkmSoIlFuA/m/zmqeGX3BBQAJ&quot;&gt;https://groups.google.com/g/nwjs-general/c/3WkmSoIlFuA/m/zmqeGX3BBQAJ&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
   </channel>
